@@ -1,113 +1,140 @@
-import Image from "next/image";
+'use client'
+
+
+
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
+    <main className="min-h-screen w-full ">
+        <div className="w-full">
+          {/* Container for video */}
+          <div className="relative w-full h-64">
+                <video className="w-full h-full object-cover" autoPlay loop muted>
+                  <source src="/intro.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <p className="text-white text-xl font-bold z-50">
+                      URBANE SWIM KENYA
+                  </p>
+                </div>
+              </div>
+
+        </div>
+        <div className="text-center p-10 m-10">
+          <h1 className="text-3xl font-bold">
+                OUR SUMMER 2024 COLLECTION
+          </h1>
+          <p className="text-lg font-medium">
+            Taking a dip this summer? Visit our shop and let us make 
+            your summer worthwile
+          </p>
+          <button type="button" className="m-4  bg-black text-white hover:opacity-80 rounded-3xl w-[200px] h-[40px]">
+          Shop Now
+        </button>
+        </div>
+      <div className="grid grid-cols-2 w-full pt-15 pb-20 ">
+      <div className="relative bg-[url('/kids.jpg')] bg-cover bg-center bg-no-repeat h-96 ">
+        <div className='absolute bottom-0 text-white p-8 '>
+        <p className="m-2 font-medium text-base">
+          Your Kids want to take a dip?
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+        <p className="m-2 font-semibold text-xl">
+         All new children&apos;s beach essentials
+        </p>
+        <button type="button" className="m-2 bg-white text-black hover:bg-gray-300 rounded-3xl w-[80px] h-[40px]  ">
+          Shop 
+        </button>
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="relative bg-[url('/swim.jpg')] bg-cover h-96 ">
+        <div className='absolute bottom-0 text-white p-8 '>
+        <p className="m-2 font-medium text-base">
+          Look good Swim better
+        </p>
+        <p className="m-2 font-semibold text-xl">
+        2024 Swimwear Collection
+        </p>
+        <button type="button" className="m-2 bg-white text-black hover:bg-gray-300 rounded-3xl w-[80px] h-[40px] ">
+          Shop 
+        </button>
+        </div>
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="relative bg-[url('/hat.jpg')] bg-cover h-96">
+        <div className='absolute bottom-0 text-white p-8 '>
+        <p className="m-2 font-medium text-base">
+          Feeling the sun?
+        </p>
+        <p className="m-2 font-semibold text-xl">
+          Hats, hats, hats
+        </p>
+        <button type="button" className="m-2 bg-white text-black hover:bg-gray-300 rounded-3xl w-[80px] h-[40px]">
+          Shop
+        </button>
+        </div>
       </div>
+      <div className="relative bg-[url('/sunnies.jpg')] bg-cover h-96">
+        <div className='absolute bottom-0 text-white p-8 '>
+        <p className="m-2 font-medium text-base">
+         All new facewear
+        </p>
+        <p className="m-2 font-semibold text-xl">
+        Sunnies for summer bunnies  
+        </p>
+        <button type="button" className="m-2 bg-white text-black hover:bg-gray-300 rounded-3xl w-[80px] h-[40px]">
+          Shop 
+        </button>
+        </div>
+      </div>
+     
+    </div>
+    <div className=" w-full">
+      <div className="text-center">
+      <h1 className="text-4xl font-bold text-center">
+        NEW THIS WEEK
+      </h1>
+      <button type="button" className="m-4  bg-black text-white hover:opacity-80 rounded-3xl w-[200px] h-[40px]">
+          Shop New Arrivals
+        </button>
+      </div>
+     
+        <div className="grid grid-cols-2">
+            <div className="relative bg-[url('/shorts.jpg')] bg-cover h-96 ">
+            <div className='absolute bottom-0 text-white p-8 '>
+            <p className="m-2 font-medium text-base">
+              Beach Essentials
+            </p>
+            <p className="m-2 font-semibold text-xl">
+            Knitted Beach Dress Coverup
+            </p>
+            <button type="button" className="m-2 bg-white text-black hover:bg-gray-300 rounded-3xl w-[80px] h-[40px]  ">
+              Shop 
+            </button>
+            </div>
+        </div>
+        <div className="relative bg-[url('/tanned.jpg')] bg-cover h-96 ">
+        <div className='absolute bottom-0 text-white p-8 '>
+        <p className="m-2 font-medium text-base">
+          Beach Essentials
+        </p>
+        <p className="m-2 font-semibold text-xl">
+        Knitted Beach Dress Coverup
+        </p>
+        <button type="button" className="m-2 bg-white text-black hover:bg-gray-300 rounded-3xl w-[80px] h-[40px]  ">
+          Shop 
+        </button>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div className="p-10 mt-20">
+      <h1 className="text-4xl font-bold" >
+        SHOP BY CUSTOMER FAVOURITES
+      </h1>
+      <div  className="flex">
+
+      </div>
+    </div>
     </main>
   );
 }

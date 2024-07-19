@@ -1,6 +1,6 @@
 'use client'
 
-
+import Slider from '@/app/components/ui/Slider'
 
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
                   Your browser does not support the video tag.
                 </video>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <p className="text-white text-xl font-bold z-50">
+                  <p className="text-black text-xl font-bold z-50">
                       URBANE SWIM KENYA
                   </p>
                 </div>
@@ -37,7 +37,7 @@ export default function Home() {
       <div className="relative bg-[url('/kids.jpg')] bg-cover bg-center bg-no-repeat h-96 ">
         <div className='absolute bottom-0 text-white p-8 '>
         <p className="m-2 font-medium text-base">
-          Your Kids want to take a dip?
+         Going on holiday with the kids?
         </p>
         <p className="m-2 font-semibold text-xl">
          All new children&apos;s beach essentials
@@ -99,26 +99,22 @@ export default function Home() {
       </div>
      
         <div className="grid grid-cols-2">
-            <div className="relative bg-[url('/shorts.jpg')] bg-cover h-96 ">
-            <div className='absolute bottom-0 text-white p-8 '>
-            <p className="m-2 font-medium text-base">
-              Beach Essentials
-            </p>
-            <p className="m-2 font-semibold text-xl">
-            Knitted Beach Dress Coverup
-            </p>
-            <button type="button" className="m-2 bg-white text-black hover:bg-gray-300 rounded-3xl w-[80px] h-[40px]  ">
-              Shop 
-            </button>
-            </div>
+            <div className="relative bg-[url('/kimono.jpg')] bg-cover h-[500px] ">
+                    <div className='absolute bottom-0 text-white p-8 '>
+                  
+                    <p className="m-2 font-semibold text-xl">
+                      Cover Ups
+                    </p>
+                    <button type="button" className="m-2 bg-white text-black hover:bg-gray-300 rounded-3xl w-[80px] h-[40px]  ">
+                      Shop 
+                    </button>
+                    </div>
         </div>
-        <div className="relative bg-[url('/tanned.jpg')] bg-cover h-96 ">
+        <div className="relative bg-[url('/bag.jpg')] bg-cover h-[500px] ">
         <div className='absolute bottom-0 text-white p-8 '>
-        <p className="m-2 font-medium text-base">
-          Beach Essentials
-        </p>
+       
         <p className="m-2 font-semibold text-xl">
-        Knitted Beach Dress Coverup
+            Summer Bags
         </p>
         <button type="button" className="m-2 bg-white text-black hover:bg-gray-300 rounded-3xl w-[80px] h-[40px]  ">
           Shop 
@@ -127,14 +123,15 @@ export default function Home() {
       </div>
       </div>
     </div>
-    <div className="p-10 mt-20">
-      <h1 className="text-4xl font-bold" >
+    <div className="p-10 mt-10">
+      <h1 className="text-4xl font-bold text-center" >
         SHOP BY CUSTOMER FAVOURITES
       </h1>
-      <div  className="flex">
-
-      </div>
+      <Slider />
+           
+      
     </div>
+   
     </main>
   );
 }

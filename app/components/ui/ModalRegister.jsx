@@ -27,7 +27,7 @@ export default function ModalReg() {
                   variant="bordered"
                 />
                 <Input
-                  autoFocus
+                  
                   endContent={
                     <MailIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
                   }

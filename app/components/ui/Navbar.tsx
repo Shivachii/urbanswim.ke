@@ -15,6 +15,10 @@ export const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleClick = () => {
+    window.location.href = '/';
+  }
+
   return (
     <div className='relative w-auto max-w-screen-xl '>
       {/* Container for menu for larger screens */}
@@ -62,7 +66,8 @@ export const Navbar = () => {
             alt=''
             width='100'
             height='100'
-            className='rounded-full'
+            className='rounded-full hover:cursor-pointer'
+            onClick={handleClick}
           />
         </div>
         <div className='flex-grow flex justify-center space-x-5 p-5 m-5 mt-10 hidden lg:block'>

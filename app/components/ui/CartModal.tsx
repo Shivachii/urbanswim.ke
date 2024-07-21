@@ -10,6 +10,7 @@ const CartModal = () => {
         {
           !cartItems ? (
             <div>
+              
               <h1 className='font-semibold'>Looks like your cart is empty</h1>
                <Link href='/list' className='hover:font-medium hover:underline underline-offset-8 decoration-slate-400 p-2 m-2'>Continue Shopping &rarr;</Link> 
 

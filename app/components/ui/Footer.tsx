@@ -69,7 +69,7 @@ export const Footer = () => {
                         </li>
                         <li className='m-2 '>
                             <Link 
-                                href=''
+                                href='/products/gift-cards'
                             >
                                 <p className='hover:translate-x-2 duration-200 hover:underline decoration-2 underline-offset-4 decoration-slate-400'> Gift Cards</p>  
                             </Link>
@@ -101,7 +101,7 @@ export const Footer = () => {
                         </li>
                         <li className='m-2 '>
                             <Link 
-                                href=''
+                                href='/contact'
                             >
                                 <p className='hover:translate-x-2 duration-200 hover:underline decoration-2 underline-offset-4 decoration-slate-400'> Contact Us</p>  
                             </Link>

@@ -16,14 +16,22 @@ const SmNavbar = () => {
 
   const handleSearchOpen = () => {
     setIsSearchOpen(!isSearchOpen);
+    setIsCartOpen(false)
+    setIsMenuOpen(false)
+
   };
 
   const handleCartOpen = () => {
     setIsCartOpen(!isCartOpen);
+    setIsSearchOpen(false)
+    setIsMenuOpen(false)
   };
+
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    setIsSearchOpen(false)
+    setIsCartOpen(false)
   };
 
   const handleClick = () => {
@@ -84,7 +92,7 @@ const SmNavbar = () => {
           onClick={toggleMenu}
         />
         {/* Menu for smaller screens */}
-        <div className={`p-4 absolute w-64 ${isMenuOpen ? 'block' : 'hidden'} right-6 z-50`}>
+        <div className={`p-4 absolute w-64 ${isMenuOpen ? 'block' : 'hidden'} mt-8 right-6 z-50`}>
           <ul className='flex flex-col space-y-4 p-4 bg-slate-50 rounded-lg'>
             <li className='my-2 hover:font-semibold'>
               <Link href=''>

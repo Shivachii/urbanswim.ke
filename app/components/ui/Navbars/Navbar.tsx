@@ -147,7 +147,7 @@ export const Navbar = () => {
                     Bags
                   </Link>
                   <Link
-                    href=''
+                    href='products/gift-cards'
                     className='hover:translate-x-2 duration-500 hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
                     Gift Cards
                   </Link>
@@ -317,8 +317,8 @@ export const Navbar = () => {
           <Link href='' className='hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
             Sale
           </Link>
-          <Link href='' className='hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-            Fit Guide
+          <Link href='/fit-guide' className='hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
+            Size Guide
           </Link>
         </div>
         <div className='flex-row space-x-5 p-5 mt-8 hidden lg:block'>

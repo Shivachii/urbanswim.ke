@@ -6,7 +6,7 @@ const CartModal = () => {
 
     const cartItems = true
   return (
-    <div className='absolute right-8 z-50 shadow-xl bg-white w-max  m-4 p-4 flex flex-col'>
+    <div className='absolute right-8 z-50 shadow-xl bg-white w-max  m-4 p-4 flex flex-col animate-appearance-in'>
         {
           !cartItems ? (
             <div>

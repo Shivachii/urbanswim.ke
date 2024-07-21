@@ -1,8 +1,16 @@
+'use client'
 import React from 'react'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook, faFacebookMessenger, faInstagram, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faInstagram, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+
 export const Footer = () => {
+
+    const scrolltoHash = (element_id: string) => {
+        const element = document.getElementById(element_id);
+        element?.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+    };
+
   return (
     <div className='relative  bg-slate-100'>
          <div className=' grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid gap-4 p-4 '>
@@ -13,9 +21,23 @@ export const Footer = () => {
                     <ul className=' m-2'>
                     <li className='m-2 '>
                             <Link 
+                                href='/Faq'
+                            >
+                                <p className='hover:translate-x-2 duration-200 hover:underline decoration-2 underline-offset-4 decoration-slate-400'> Frequently Asked Questions</p>  
+                            </Link>
+                        </li>
+                    <li className='m-2 '>
+                            <Link 
+                                href='/fit-guide'
+                            >
+                                <p className='hover:translate-x-2 duration-200 hover:underline decoration-2 underline-offset-4 decoration-slate-400'> Size Guide</p>  
+                            </Link>
+                        </li>
+                    <li className='m-2 '>
+                            <Link 
                                 href=''
                             >
-                                <p className='hover:translate-x-2 duration-200 hover:underline decoration-2 underline-offset-4 decoration-slate-400'> Shopping and Delivery</p>  
+                                <p className='hover:translate-x-2 duration-200 hover:underline decoration-2 underline-offset-4 decoration-slate-400'> Shipping and Delivery</p>  
                             </Link>
                         </li>
                         <li className='m-2 '>
@@ -23,13 +45,6 @@ export const Footer = () => {
                                 href=''
                             >
                                 <p className='hover:translate-x-2 duration-200 hover:underline decoration-2 underline-offset-4 decoration-slate-400'> Payment Options</p>  
-                            </Link>
-                        </li>
-                        <li className='m-2 '>
-                            <Link 
-                                href='/Faq'
-                            >
-                                <p className='hover:translate-x-2 duration-200 hover:underline decoration-2 underline-offset-4 decoration-slate-400'> Frequently Asked Questions</p>  
                             </Link>
                         </li>
                     </ul>
@@ -143,21 +158,22 @@ export const Footer = () => {
                 <ul className='flex flex-row px-4 mx-4 space-x-8 list-disc text-xs '>
                     <li>
                     <Link 
-                                href='/privacy-policy'
+                                href='/policies/privacy-policy'
                             >
                                 <p className=' hover:underline decoration-2 underline-offset-4 decoration-slate-400'> Privacy Policy</p>  
                             </Link>
                     </li>
                     <li>
                     <Link 
-                                href=''
+                                href='/policies/terms-of-service'
                             >
                                 <p className=' hover:underline decoration-2 underline-offset-4 decoration-slate-400'> Terms of Service</p>  
                             </Link>
                     </li>
                     <li>
                     <Link 
-                                href=''
+                                href='/Faq'
+                                onClick={() => scrolltoHash('Delivery')} 
                             >
                                 <p className=' hover:underline decoration-2 underline-offset-4 decoration-slate-400'> Shipping Policy</p>  
                             </Link>

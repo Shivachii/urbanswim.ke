@@ -66,7 +66,7 @@ const SmNavbar = () => {
           <FontAwesomeIcon icon={faSearch} className='cursor-pointer' onClick={handleSearchOpen} />
           {
             isSearchOpen && (
-              <div className='absolute right-8 z-50'>
+              <div className='absolute right-8 z-50 animate-appearance-in'>
                 <form className='flex justify-between p-2 rounded-md flex-1' onSubmit={handleSearch}>
                   <input type="search" name="name" placeholder='Type to search' className='rounded-3xl p-2 flex-1 outline-none focus:border-gray-800 focus:border' />
                   <button type="submit" className='m-2 text-slate-400 hover:font-medium'>Search</button>
@@ -92,7 +92,7 @@ const SmNavbar = () => {
           onClick={toggleMenu}
         />
         {/* Menu for smaller screens */}
-        <div className={`p-4 absolute w-64 ${isMenuOpen ? 'block' : 'hidden'} mt-8 right-6 z-50`}>
+        <div className={`p-4 absolute w-64 ${isMenuOpen ? 'block' : 'hidden'} mt-8 right-6 z-50 animate-appearance-in`}>
           <ul className='flex flex-col space-y-4 p-4 bg-slate-50 rounded-lg'>
             <li className='my-2 hover:font-semibold'>
               <Link href=''>

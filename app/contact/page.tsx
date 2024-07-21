@@ -45,10 +45,10 @@ const Contact = () => {
                     for general inquiries and international shoppers.
                     Additionally, our fit guide is designed to help you find your perfect fit.
                 </p>
-                <div className='absolute -my-8 inset-x-0 bottom-0 flex justify-center space-x-4'>
-                    <Link href=''>Faqs</Link>
-                    <Link href=''>Care Tips</Link>
-                    <Link href=''>Size Guide</Link>
+                <div className='absolute -my-8 inset-x-0 bottom-0 flex justify-center space-x-8'>
+                    <Link href='/Faq' className='hover:translate-x-2 duration-200 hover:underline decoration-2 underline-offset-4 decoration-slate-400'>Faqs</Link>
+                    <Link href='' className='hover:translate-x-2 duration-200 hover:underline decoration-2 underline-offset-4 decoration-slate-400'>Care Tips</Link>
+                    <Link href='/fit-guide' className='hover:translate-x-2 duration-200 hover:underline decoration-2 underline-offset-4 decoration-slate-400'>Size Guide</Link>
                 </div>
          </div>
 

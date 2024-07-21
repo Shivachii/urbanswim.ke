@@ -51,7 +51,7 @@ export default function Returns() {
         },
       }}
     >
-      <AccordionItem key="1" aria-label="Accordion 1" title="What is your return policy?">
+      <AccordionItem key="1" aria-label="Accordion 1" title="What is your return policy?" >
         {defaultContent}
       </AccordionItem>
       <AccordionItem key="2" aria-label="Accordion 2" title="I am outside Kenya what is the return policy?">

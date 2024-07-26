@@ -95,28 +95,28 @@ const SmNavbar = () => {
         <div className={`p-4 absolute w-64 ${isMenuOpen ? 'block' : 'hidden'} mt-8 right-6 z-50 animate-appearance-in`}>
           <ul className='flex flex-col space-y-4 p-4 bg-slate-50 rounded-lg'>
             <li className='my-2 hover:font-semibold'>
-              <Link href=''>
+              <Link href='' legacyBehavior>
                 <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
                   <FontAwesomeIcon icon={faMale} className='w-[20px] h-[20px]' /> Men
                 </p>
               </Link>
             </li>
             <li className='my-2 hover:font-semibold'>
-              <Link href=''>
+              <Link href='' legacyBehavior>
                 <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
                   <FontAwesomeIcon icon={faFemale} className='w-[20px] h-[20px]' /> Women
                 </p>
               </Link>
             </li>
             <li className='my-2 hover:font-semibold'>
-              <Link href=''>
+              <Link href='' legacyBehavior>
                 <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
                   <FontAwesomeIcon icon={faChild} className='w-[20px] h-[20px]' /> Children
                 </p>
               </Link>
             </li>
             <li className='my-2 hover:font-semibold'>
-              <Link href=''>
+              <Link href='' legacyBehavior>
                 <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
                   <FontAwesomeIcon icon={faPlus} className='w-[20px] h-[20px]' /> New Arrivals
                 </p>
@@ -132,14 +132,14 @@ const SmNavbar = () => {
               </div>
             </div>
             <li className='my-2 hover:font-semibold'>
-              <Link href=''>
+              <Link href='' legacyBehavior>
                 <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
                   <FontAwesomeIcon icon={faBagShopping} /> Orders
                 </p>
               </Link>
             </li>
             <li className='my-2 hover:font-semibold'>
-              <Link href=''>
+              <Link href='' legacyBehavior>
                 <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
                   <FontAwesomeIcon icon={faLocationDot} /> Our Store
                 </p>
@@ -149,7 +149,7 @@ const SmNavbar = () => {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default SmNavbar;

@@ -3,15 +3,15 @@ import Image from 'next/image'
 
 const Care = () => {
   return (
-    <div className='pt-10 pb-20 '>
-        <h1 className='text-center font-bold text-3xl mt-10 '>
+    <div className='pt-10 pb-20'>
+        <h1 className='text-center font-bold text-3xl mt-5 '>
          Swimwear Care Tips
         </h1>
         <p className='text-center my-5 text-lg'>
             Every one wants to get the most out of their purchases so let us show you how
         </p>
-       <div className="relative grid grid-cols-2  bg-gradient-to-b from-zinc-600 to-zinc-900  text-white">
-            <div className="p-2 mx-2 my-4">
+       <div className="relative grid grid-cols-2  bg-gradient-to-b from-zinc-700 to-zinc-900  text-white">
+            <div className="p-2 mx-2 my-16">
                 <div className="p-2 mx-2 my-4">
                 <h1 className="font-semibold text-2xl my-2">
                     CARE TIP 1
@@ -52,13 +52,13 @@ const Care = () => {
                 </p>
             </div>
             </div>
-            <div className="relative bg-[url('/tips.jpg')] bg-cover bg-center bg-no-repeat p-2 mx-4 my-20 h-64 sm:h-96"></div>
+            <div className="relative bg-[url('/tips.jpg')] bg-cover bg-center bg-no-repeat p-2 mx-4 my-20 h-[600px]"></div>
 
-            <div className="relative bg-[url('/bikini.jpg')] bg-cover bg-center bg-no-repeat p-2 mx-4 my-12  h-64 sm:h-96"></div>
+            <div className="relative bg-[url('/bikini.jpg')] bg-cover bg-center bg-no-repeat p-2 mx-4 my-12 h-[600px] "></div>
 
             
 
-            <div className="p-2 mx-2 my-4">
+            <div className="p-2 mx-2 my-24">
             <div className="p-2 mx-2 my-4">
             <h1 className="font-semibold text-2xl my-2">
                     CARE TIP 3

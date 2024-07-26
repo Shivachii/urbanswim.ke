@@ -16,14 +16,14 @@ interface Product {
   releaseDate: string;
 }
 
-const ProductID: React.FC = () => {
+const ProductDetail: React.FC = () => {
   const { id } = useParams();
   const [product, setProduct] = useState<Product | null>(null);
-  
+
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/api/products/${id}`);
+        const response = await axios.get(`http://localhost:8080/accessories-api/products/${id}`);
         setProduct(response.data);
         console.log(response.data);
       } catch (error) {
@@ -43,9 +43,9 @@ const ProductID: React.FC = () => {
   }
 
   return (
-    <div className="containers">
+    <div className="container">
       <div className="right-column">
-        <div className="product-description">
+        <div className="product-description"> 
           <span>{product.stockQuantity}</span>
           <h1>{product.name}</h1>
           <h5>{product.brand}</h5>
@@ -83,4 +83,4 @@ const ProductID: React.FC = () => {
   );
 };
 
-export default ProductID;
+export default ProductDetail;

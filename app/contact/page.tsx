@@ -29,7 +29,7 @@ const Contact = () => {
 
   return (
 
-    <div className='w-full pt-20 pb-20 '>      
+    <div className='w-full pt-5 pb-20 '>      
          <div className='text-center'>
                 <h1 className='text-4xl font-bold'>
                     CONTACT US
@@ -50,11 +50,11 @@ const Contact = () => {
                     <Link href='/care-tips' className='hover:translate-x-2 duration-200 hover:underline decoration-2 underline-offset-4 decoration-slate-400'>Care Tips</Link>
                     <Link href='/fit-guide' className='hover:translate-x-2 duration-200 hover:underline decoration-2 underline-offset-4 decoration-slate-400'>Size Guide</Link>
                 </div>
-         </div>
-
-                
+         </div> 
             </div>
-        
+          <div className="">
+            <Contact/>
+          </div>
      
         
          

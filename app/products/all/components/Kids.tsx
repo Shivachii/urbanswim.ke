@@ -2,6 +2,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Pagination } from 'swiper/modules';
 
 // Define the Product interface
 interface Product {
@@ -46,11 +51,40 @@ const Kids = () => {
       {products.length > 0 ? (
         products.map((product) => (
           <div key={product.Id} className="w-96 h-80 rounded-md p-2 m-2 hover:-translate-y-2 duration-500 bg-slate-500">
-            <div><img src="/kids.jpg" alt={product.prodName} /></div>
-            <h3>{product.prodName}</h3>
+            <Swiper
+                    spaceBetween={30}
+                    pagination={{
+                      clickable: true,
+                    }}
+                    modules={[Pagination]}
+                    className="mySwiper w-full h-full p-10 m-10"
+                    breakpoints={{
+                      320: {
+                        slidesPerView: 1,
+                        spaceBetween: 10,
+                      },
+                      640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                      },
+                      768: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                      },
+                      1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 30,
+                      },
+                    }}
+                  >
+    <SwiperSlide className="flex relative justify-center items-center bg-slate-50 h-32 mb-10 shadow-xl hover:cursor-pointer">
+    <h3>{product.prodName}</h3>
             <p>{product.prodDesc}</p>
             <p>Price: Ksh {product.prodPrice}</p>
             <Link href={'/${product.id}'} > See More</Link>
+   </SwiperSlide>
+               </Swiper>
+            
           </div>
         ))
       ) : (

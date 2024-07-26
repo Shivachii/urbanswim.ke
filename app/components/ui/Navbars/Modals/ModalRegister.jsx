@@ -1,7 +1,7 @@
 import React from "react";
 import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure, Checkbox, Input, Link} from "@nextui-org/react";
-import {MailIcon} from './MailIcon.jsx';
-import {LockIcon} from './LockIcon.jsx';
+import {MailIcon} from './MailIcon';
+import {LockIcon} from './LockIcon';
 
 export default function ModalReg() {
   const {isOpen, onOpen, onOpenChange} = useDisclosure();

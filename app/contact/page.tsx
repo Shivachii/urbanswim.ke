@@ -47,7 +47,7 @@ const Contact = () => {
                 </p>
                 <div className='absolute -my-8 inset-x-0 bottom-0 flex justify-center space-x-8'>
                     <Link href='/Faq' className='hover:translate-x-2 duration-200 hover:underline decoration-2 underline-offset-4 decoration-slate-400'>Faqs</Link>
-                    <Link href='' className='hover:translate-x-2 duration-200 hover:underline decoration-2 underline-offset-4 decoration-slate-400'>Care Tips</Link>
+                    <Link href='/care-tips' className='hover:translate-x-2 duration-200 hover:underline decoration-2 underline-offset-4 decoration-slate-400'>Care Tips</Link>
                     <Link href='/fit-guide' className='hover:translate-x-2 duration-200 hover:underline decoration-2 underline-offset-4 decoration-slate-400'>Size Guide</Link>
                 </div>
          </div>

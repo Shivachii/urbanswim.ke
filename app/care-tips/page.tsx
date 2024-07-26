@@ -3,15 +3,17 @@ import Image from 'next/image'
 
 const Care = () => {
   return (
-    <div className='pt-10 '>
-        <h1 className='text-center font-bold text-3xl my-10 '>
-        Urbaneswimke Swimwear Care Tips
+    <div className='pt-10 pb-20 '>
+        <h1 className='text-center font-bold text-3xl mt-10 '>
+         Swimwear Care Tips
         </h1>
+        <p className='text-center my-5 text-lg'>
+            Every one wants to get the most out of their purchases so let us show you how
+        </p>
        <div className="relative grid grid-cols-2  bg-gradient-to-b from-zinc-600 to-zinc-900  text-white">
             <div className="p-2 mx-2 my-4">
-                <h1 className="absolute z-0">URBANSWIM</h1>
                 <div className="p-2 mx-2 my-4">
-                <h1 className="font-bold text-2xl my-2">
+                <h1 className="font-semibold text-2xl my-2">
                     CARE TIP 1
                 </h1>
                 <h3 className="font-medium  my-2">
@@ -31,7 +33,7 @@ const Care = () => {
                 </div>
               
                 <div className="p-2 mx-2 my-4">
-            <h1 className="font-bold">
+            <h1 className="font-semibold text-2xl my-2">
                     CARE TIP 2
                 </h1>
                 <h3 className="font-medium  my-2">
@@ -58,7 +60,7 @@ const Care = () => {
 
             <div className="p-2 mx-2 my-4">
             <div className="p-2 mx-2 my-4">
-            <h1 className="font-bold">
+            <h1 className="font-semibold text-2xl my-2">
                     CARE TIP 3
                 </h1>
                 <h3 className="font-medium  my-2">
@@ -72,7 +74,7 @@ const Care = () => {
                 </p>
             </div>
             <div className="p-2 mx-2 my-4">
-            <h1 className="font-bold">
+            <h1 className="font-semibold text-2xl my-2">
                     CARE TIP 4
                 </h1>
                 <h3 className="font-medium my-2">

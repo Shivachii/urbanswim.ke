@@ -4,9 +4,9 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faCartShopping, faBars, faMale, faFemale, faChild, faPlus, faBagShopping, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { useRouter } from 'next/navigation';
-import CartModal from '../CartModal';
-import ModalReg from '../ModalRegister';
-import ModalLogin from '../Modal';
+import CartModal from './Modals/CartModal';
+import ModalReg from './Modals/ModalRegister';
+import ModalLogin from './Modals/Modal';
 
 const SmNavbar = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);

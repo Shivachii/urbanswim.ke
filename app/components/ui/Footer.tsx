@@ -35,7 +35,8 @@ export const Footer = () => {
                         </li>
                     <li className='m-2 '>
                             <Link 
-                                href=''
+                                href='/Faq'
+                                onClick={() => scrolltoHash('Delivery')} 
                             >
                                 <p className='hover:translate-x-2 duration-200 hover:underline decoration-2 underline-offset-4 decoration-slate-400'> Shipping and Delivery</p>  
                             </Link>
@@ -98,7 +99,7 @@ export const Footer = () => {
                     <ul className=' m-2'>
                     <li className='m-2 '>
                             <Link 
-                                href=''
+                                href='/help'
                             >
                                 <p className='hover:translate-x-2 duration-200 hover:underline decoration-2 underline-offset-4 decoration-slate-400'> Need help?</p>  
                             </Link>
@@ -172,8 +173,8 @@ export const Footer = () => {
                     </li>
                     <li>
                     <Link 
-                                href='/Faq'
-                                onClick={() => scrolltoHash('Delivery')} 
+                                href='/policies/shipping-and-delivery-policy'
+                                
                             >
                                 <p className=' hover:underline decoration-2 underline-offset-4 decoration-slate-400'> Shipping Policy</p>  
                             </Link>

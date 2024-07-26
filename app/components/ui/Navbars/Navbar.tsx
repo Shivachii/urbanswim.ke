@@ -1,40 +1,19 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faBagShopping,
-  faBars,
-  faCartShopping,
-  faChild,
-  faFemale,
-  faSearch,
-  faUser,
-  faMale,
-  faHeart,
-  faPhone,
-  faPlus,
-  faLocationDot
-} from '@fortawesome/free-solid-svg-icons';
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+'use client'
+import React, { useState } from 'react';
 import Image from 'next/image';
-import ModalLogin from '@/app/components/ui/Modal';
-import ModalReg from '@/app/components/ui/ModalRegister';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import CartModal from '../CartModal';
 import SmNavbar from './SmNavbar';
 
 export const Navbar = () => {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [subHoveredItem, setSubHoveredItem] = useState<string | null>(null);
-  const [isCartOpen, setisCartOpen] = useState(false);
+  const router = useRouter();
 
-  const handleClick = () => {
-    window.location.href = '/';
+  const handleLinkClick = () => {
+    setHoveredItem(null);
   };
 
-  // Search Handle
-  const router = useRouter();
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -45,315 +24,110 @@ export const Navbar = () => {
     }
   };
 
-  // Handle click outside to close dropdown
-   useEffect(() => {
-    const handleDocumentClick = (event: MouseEvent) => {
-      if (!(event.target instanceof Element)) return;
-      if (!event.target.closest('.dropdown-menu')) {
-        setHoveredItem(null);
-        setSubHoveredItem(null);
-      }
-    };
-
-    document.addEventListener('click', handleDocumentClick);
-
-    return () => {
-      document.removeEventListener('click', handleDocumentClick);
-    };
-  }, []); 
-
-  const handleCartOpen = () => {
-    setisCartOpen((prev) => !prev);
-  };
-
   return (
-    <div className='relative w-auto max-w-screen-xl'>
-      {/* Container for menu for larger screens */}
-      <div className='relative flex-row p-4 bg-slate-100 hidden lg:flex'>
-        <div className='absolute top-0 right-0 m-2 hidden lg:block'>
-          <ul className='flex flex-row space-x-4 text-lg'>
-            <li>
-              <Link
-                href='https://wa.me/message/WFDBTOE677NNL1'
-                target='_blank'
-                rel='noopener noreferrer'>
-                <FontAwesomeIcon icon={faWhatsapp} className='mr-2 mt-2' />
+    <nav
+      className="bg-slate-200 w-full top-0 fixed z-50 max-h-24"
+      onMouseLeave={() => setHoveredItem(null)}
+    >
+      {/* Small screen Navbar */}
+      <div className="lg:hidden block">
+        <SmNavbar />
+      </div>
+
+      {/* Large screen Navbar */}
+      <div className="container mx-auto p-4 flex items-center justify-between hidden lg:flex">
+        <div className='flex items-center space-x-4'>
+          <Link href="/">
+            <Image src="/logo.jpg" alt="Logo" width={80} height={80} className='rounded-full' />
+          </Link>
+          <ul className="flex space-x-4">
+            <li className="nav-item">
+              <Link href="/">
+                <a className="block py-2 px-4 text-gray-700 hover:text-gray-900">Home</a>
               </Link>
             </li>
-            <li>
-              <div className='border border-black h-6 mt-2'> </div>
+            <li
+              className="nav-item relative"
+              onMouseEnter={() => setHoveredItem('shopAll')}
+            >
+              <span className="block py-2 px-4 text-gray-700 hover:text-gray-900 cursor-pointer">Shop All</span>
+              {hoveredItem === 'shopAll' && (
+                <div
+                  className='absolute flex flex-row gap-8 p-4 mt-4 bg-white shadow-md rounded-md z-50 animate-appearance-in dropdown-menu'
+                >
+                  {/* Featured */}
+                  <div className='flex flex-col p-2 space-y-2'>
+                    <h1 className='text-gray-500 font-semibold'>Featured</h1>
+                    <Link href=""><a className='hover:underline decoration-slate-500'>New Arrivals</a></Link>
+                    <Link href=""><a className='hover:underline decoration-slate-500'>Sale</a></Link>
+                    <Link href=""><a className='hover:underline decoration-slate-500'>Bags</a></Link>
+                    <Link href="/products/gift-cards"><a className='hover:underline decoration-slate-500'>Gift Cards</a></Link>
+                  </div>
+                  {/* Other Categories */}
+                  {/* Repeat similar blocks for other categories */}
+                </div>
+              )}
             </li>
-            <li>
-              <Link
-                href='https://maps.app.goo.gl/yphhVRM7J756SQrS7'
-                target='_blank'
-                rel='noopener noreferrer'>
-                <FontAwesomeIcon icon={faLocationDot} className='mr-2 mt-2' />
+            <li
+              className="nav-item relative"
+              onMouseEnter={() => setHoveredItem('men')}
+            >
+              <span className="block py-2 px-4 text-gray-700 hover:text-gray-900 cursor-pointer">Men</span>
+              {hoveredItem === 'men' && (
+                <div className='absolute flex flex-col gap-4 p-4 mt-4 bg-white shadow-md rounded-md z-50 animate-appearance-in dropdown-menu'>
+                  <Link href=""><a className='hover:underline decoration-slate-500'>All Men</a></Link>
+                  <Link href=""><a className='hover:underline decoration-slate-500'>Swimwear</a></Link>
+                  <Link href=""><a className='hover:underline decoration-slate-500'>Accessories</a></Link>
+                </div>
+              )}
+            </li>
+            <li
+              className="nav-item relative"
+              onMouseEnter={() => {
+                setHoveredItem('women');
+                setSubHoveredItem(null); // Reset sub-hovered item
+              }}
+            >
+              <span className="block py-2 px-4 text-gray-700 hover:text-gray-900 cursor-pointer">Women</span>
+              {hoveredItem === 'women' && (
+                <div
+                  className='absolute flex flex-col gap-4 p-4 mt-4 bg-white shadow-md rounded-md z-50 animate-appearance-in dropdown-menu'
+                >
+                  <Link href=""><a className='hover:underline decoration-slate-500'>All Women</a></Link>
+                  {/* Sub-menu for One Pieces */}
+                  <div className='relative' onMouseEnter={() => setSubHoveredItem('onePiece')}>
+                    <Link href=""><a className='hover:underline decoration-slate-500'>One Pieces</a></Link>
+                    {subHoveredItem === 'onePiece' && (
+                      <div className="absolute left-full top-0 flex flex-col gap-4 p-4 mt-0 ml-4 bg-white shadow-md rounded-md z-50 animate-appearance-in dropdown-menu">
+                        <Link href=""><a className='hover:underline decoration-slate-500'>Monokini</a></Link>
+                        <Link href=""><a className='hover:underline decoration-slate-500'>Bikini</a></Link>
+                      </div>
+                    )}
+                  </div>
+                  {/* Repeat for other categories */}
+                </div>
+              )}
+            </li>
+            <li className="nav-item relative">
+              <Link href='/fit-guide'>
+                <a className='block py-2 px-4 text-gray-700 hover:text-gray-900 cursor-pointer'>Size Guide</a>
               </Link>
-            </li>
-            <li>
-              <div className='border border-black h-6 mt-2'> </div>
-            </li>
-            <li>
-              <Link href='tel:+254712785836' target='_blank' rel='noopener noreferrer'>
-                <FontAwesomeIcon icon={faPhone} className='mr-2 mt-2' />
-              </Link>
-            </li>
-            <li>
-              <ModalReg />
-            </li>
-            <li>
-              <ModalLogin />
             </li>
           </ul>
         </div>
-        <div className='m-5 hidden lg:block'>
-          <Image
-            src='/logo.jpg'
-            alt=''
-            width='100'
-            height='100'
-            className='rounded-full hover:cursor-pointer'
-            onClick={handleClick}
+        <form className="flex items-center" onSubmit={handleSearch}>
+          <input
+            className="form-input px-4 py-2 rounded-lg border border-gray-300"
+            type="search"
+            name="name"
+            placeholder="Search"
+            aria-label="Search"
           />
-        </div>
-        <div className='relative text-center flex-grow flex justify-center space-x-5 p-5 m-2 mt-10 lg:block'>
-          <Link
-            href=''
-            className='hover:underline decoration-2 underline-offset-8 decoration-slate-500'
-            onMouseEnter={() => setHoveredItem('dropdown')}>
-            Shop All
-            {hoveredItem === 'dropdown' && (
-              <div
-                className='absolute flex flex-row gap-8 p-4 mt-4 w-max bg-white shadow-md rounded-md z-50 animate-appearance-in dropdown-menu'
-                onMouseEnter={() => setHoveredItem('dropdown')}
-                onMouseLeave={() => setHoveredItem(null)}>
-                {/* Featured */}
-                <div className='flex flex-col p-2 m-2 space-y-5 justify-start text-start'>
-                  <h1 className='text-gray-500 font-semibold'>Featured</h1>
-                  <Link
-                    href=''
-                    className='hover:translate-x-2 duration-500 hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-                    New Arrivals
-                  </Link>
-                  <Link
-                    href=''
-                    className='hover:translate-x-2 duration-500 hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-                    Sale
-                  </Link>
-                  <Link
-                    href=''
-                    className='hover:translate-x-2 duration-500 hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-                    Bags
-                  </Link>
-                  <Link
-                    href='products/gift-cards'
-                    className='hover:translate-x-2 duration-500 hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-                    Gift Cards
-                  </Link>
-                </div>
-                {/* By Category */}
-                <div className='flex flex-col p-2 m-2 space-y-5 justify-start text-start'>
-                  <h1 className='text-gray-500 font-semibold'>By Category</h1>
-                  <Link
-                    href=''
-                    className='hover:translate-x-2 duration-500 hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-                    Swim Tops
-                  </Link>
-                  <Link
-                    href=''
-                    className='hover:translate-x-2 duration-500 hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-                    Swim Bottoms
-                  </Link>
-                  <Link
-                    href=''
-                    className='hover:translate-x-2 duration-500 hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-                    Beach Tops
-                  </Link>
-                  <Link
-                    href=''
-                    className='hover:translate-x-2 duration-500 hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-                    Beach Bottoms
-                  </Link>
-                  <Link
-                    href=''
-                    className='hover:translate-x-2 duration-500 hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-                    Cover Ups
-                  </Link>
-                  <Link
-                    href=''
-                    className='hover:translate-x-2 duration-500 hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-                    Accessories
-                  </Link>
-                </div>
-                {/* By Size */}
-                <div className='flex flex-col p-2 m-2 space-y-5 justify-start text-start'>
-                  <h1 className='text-gray-500 font-semibold'>By Size</h1>
-                  <Link
-                    href=''
-                    className='hover:translate-x-2 duration-500 hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-                    Small
-                  </Link>
-                  <Link
-                    href=''
-                    className='hover:translate-x-2 duration-500 hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-                    Medium
-                  </Link>
-                  <Link
-                    href=''
-                    className='hover:translate-x-2 duration-500 hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-                    Large
-                  </Link>
-                  <Link
-                    href=''
-                    className='hover:translate-x-2 duration-500 hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-                    Plus Size
-                  </Link>
-                </div>
-                {/* Mens Menu */}
-                <div className='flex flex-col p-2 m-2 space-y-5 justify-start text-start'>
-                  <h1 className='text-gray-500 font-semibold'>Something for Everyone</h1>
-                  <Link
-                    href=''
-                    className='hover:translate-x-2 duration-500'
-                    onMouseEnter={() => setSubHoveredItem('menDropdown')}
-                    onMouseLeave={() => setSubHoveredItem(null)}>
-                    Men
-                    {subHoveredItem === 'menDropdown' && (
-                      <div className='flex flex-col p-2 m-2 space-y-5 justify-start text-start animate-appearance-in'>
-                        <Link
-                          href=''
-                          className='hover:translate-x-2 duration-500 hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-                          Swimwear
-                        </Link>
-                        <Link
-                          href=''
-                          className='hover:translate-x-2 duration-500 hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-                          Beachwear
-                        </Link>
-                        <Link
-                          href=''
-                          className='hover:translate-x-2 duration-500 hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-                          Accessories
-                        </Link>
-                        <Link
-                          href=''
-                          className='hover:translate-x-2 duration-500 hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-                          Sizes
-                        </Link>
-                      </div>
-                    )}
-                  </Link>
-                  <Link
-                    href=''
-                    onMouseEnter={() => setSubHoveredItem('womenDropdown')}
-                    onMouseLeave={() => setSubHoveredItem(null)}>
-                    Women
-                    {subHoveredItem === 'womenDropdown' && (
-                      <div className='flex flex-col p-2 m-2 space-y-5 justify-start text-start animate-appearance-in'>
-                        <Link
-                          href=''
-                          className='hover:translate-x-2 duration-500 hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-                          Swimwear
-                        </Link>
-                        <Link
-                          href=''
-                          className='hover:translate-x-2 duration-500 hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-                          Beachwear
-                        </Link>
-                        <Link
-                          href=''
-                          className='hover:translate-x-2 duration-500 hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-                          Accessories
-                        </Link>
-                        <Link
-                          href=''
-                          className='hover:translate-x-2 duration-500 hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-                          Sizes
-                        </Link>
-                      </div>
-                    )}
-                  </Link>
-                  <Link
-                    href=''
-                    onMouseEnter={() => setSubHoveredItem('kidsDropdown')}
-                    onMouseLeave={() => setSubHoveredItem(null)}>
-                    Kids
-                    {subHoveredItem === 'kidsDropdown' && (
-                      <div className='flex flex-col p-2 m-2 space-y-5 justify-start text-start animate-appearance-in'>
-                        <Link
-                          href=''
-                          className='hover:translate-x-2 duration-500 hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-                          Swimwear
-                        </Link>
-                        <Link
-                          href=''
-                          className='hover:translate-x-2 duration-500 hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-                          Beachwear
-                        </Link>
-                        <Link
-                          href=''
-                          className='hover:translate-x-2 duration-500 hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-                          Accessories
-                        </Link>
-                        <Link
-                          href=''
-                          className='hover:translate-x-2 duration-500 hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-                          Sizes
-                        </Link>
-                      </div>
-                    )}
-                  </Link>
-                </div>
-              </div>
-            )}
-          </Link>
-          <Link
-            href=''
-            className='hover:underline decoration-2 underline-offset-8 decoration-slate-500'
-            onMouseEnter={() => setHoveredItem(null)}>
-            New Arrivals
-          </Link>
-          <Link href='' className='hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-            Sale
-          </Link>
-          <Link href='/fit-guide' className='hover:underline decoration-2 underline-offset-8 decoration-slate-500'>
-            Size Guide
-          </Link>
-        </div>
-        <div className='flex-row space-x-5 p-5 mt-8 hidden lg:block'>
-          <form className='flex justify-between p-2 rounded-md flex-1' onSubmit={handleSearch}>
-            <input
-              type='search'
-              name='name'
-              id=''
-              placeholder='Type to search'
-              className='rounded-3xl p-2 flex-1 outline-none focus:border-gray-800 focus:border'
-            />
-            <button>
-              <FontAwesomeIcon icon={faSearch} className='cursor pointer mx-2' />
-            </button>
-          </form>
-          <div className='relative flex flex-row space-x-6 justify-end'>
-            <div className='relative'>
-              <FontAwesomeIcon icon={faCartShopping} className='mt-3 text-xl cursor-pointer' onClick={handleCartOpen} />
-              <div className='absolute -top-1 -right-4 w-5 h-5 bg-pink-600 rounded-full items-center justify-center text-center text-white text-sm'>
-                2
-              </div>
-              {isCartOpen && <CartModal />}
-            </div>
-            <div className='relative'>
-              <FontAwesomeIcon icon={faHeart} className='mt-3 text-xl' />
-              <div className='absolute -top-1 -right-4 w-5 h-5 bg-pink-600 rounded-full items-center justify-center text-center text-white text-sm'>
-                2
-              </div>
-            </div>
-          </div>
-        </div>
+          <button className="px-4 py-2 bg-pink-500 text-white rounded-lg ml-2" type="submit">
+            Search
+          </button>
+        </form>
       </div>
-      <div className='lg:hidden'>
-        <SmNavbar />
-      </div>
-    </div>
+    </nav>
   );
 };

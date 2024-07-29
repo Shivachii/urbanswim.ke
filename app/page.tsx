@@ -2,8 +2,6 @@
 
 import Slider from '@/app/components/ui/Slider';
 import Image from 'next/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faCartShopping, faBars, faMale, faFemale, faChild, faPlus, faBagShopping, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
   return (
@@ -16,7 +14,7 @@ const Home = () => {
             Your browser does not support the video tag.
           </video>
           <div className="absolute inset-0 flex items-center justify-center">
-            <p className="text-black text-xl sm:text-3xl font-bold z-20">
+            <p className="text-white text-xl sm:text-3xl font-bold z-20">
               URBANE SWIM KENYA
             </p>
           </div>
@@ -124,7 +122,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="p-4 sm:p-10 mt-4 sm:mt-10">
+      <div className="p-4 sm:p-10 mt-4 sm:mt-10 ">
         <h1 className="text-2xl sm:text-4xl font-bold text-center">
           SHOP BY CUSTOMER FAVOURITES
         </h1>

@@ -4,8 +4,6 @@ import Mens from './tables/Mens'
 import Kids from './tables/Kids'
 
 
-       
-
 const Fit = () => {
   return (
     <div className="m-20 mt-5 pt-5 p-20 relative">

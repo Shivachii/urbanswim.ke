@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -60,5 +61,5 @@ const Slider = () => {
     </Swiper>
   );
 };
-
 export default Slider;
+

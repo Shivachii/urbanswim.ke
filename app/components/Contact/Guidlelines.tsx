@@ -1,36 +1,10 @@
-"use client"
-
+'use client'
 import React from 'react'
-import { Label } from "../components/ui/Label";
-import { Input } from "../components/ui/Input";
-import { cn } from "@/utils/cn";
-import Link from 'next/link';
+import Link from 'next/link'
 
-
-const Contact = () => {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("Form submitted");
-  };
-  const LabelInputContainer = ({
-    children,
-    className,
-  }: {
-    children: React.ReactNode;
-    className?: string;
-  }) => {
-    return (
-      <div className={cn("flex flex-col space-y-2 w-full", className)}>
-        {children}
-      </div>
-    );
-  };
-  
-
+const Guidlelines = () => {
   return (
-
-    <div className='w-full pt-5 pb-20 '>      
-         <div className='text-center'>
+    <div className='text-center'>
                 <h1 className='text-4xl font-bold'>
                     CONTACT US
                 </h1>
@@ -52,16 +26,7 @@ const Contact = () => {
                 </div>
          </div> 
             </div>
-          <div className="">
-            <Contact/>
-          </div>
-     
-        
-         
-    </div>             
+  )
+}
 
-  );
-};
-
-
-export default Contact;
+export default Guidlelines

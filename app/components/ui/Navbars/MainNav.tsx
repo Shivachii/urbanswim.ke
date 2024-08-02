@@ -71,7 +71,7 @@ export const MainNav = () => {
               <div className="h-6 w-0.5 bg-black"></div>
               <Link href=''><FontAwesomeIcon icon={faWhatsapp}/></Link>
               <div className="h-6 w-0.5 bg-black"></div>
-              <Link href=''>Help</Link>
+              <Link href='/contact'>Help</Link>
               
             </div>
         <ModalLogin/>
@@ -79,7 +79,7 @@ export const MainNav = () => {
       </div>
        
         {/* Main Nav content container */}
-       <div className="relative container flex flex-row  justify-between mt-8  ">
+       <div className="relative container flex flex-row  justify-between mt-8 "   >
         {/* Side menu container */}
         <div className="lg:hidden flex  p-2 m-2 mt-8">
         <FontAwesomeIcon
@@ -89,7 +89,7 @@ export const MainNav = () => {
         />
         {/* Menu for smaller screens */}
                   <div
-            className={`p-4 absolute w-80 ${isMenuOpen ? 'block' : 'hidden'} mt-6 bg-slate-50 rounded-lg left-0 z-50 animate-appearance-in h-max overflow-auto max-h-96`} 
+            className={`p-4 absolute max-w-[500px] ${isMenuOpen ? 'block' : 'hidden'} mt-6 bg-slate-100 rounded-lg left-0 z-50 animate-appearance-in h-max overflow-auto max-h-96`} 
           >
             {/* Close button */}
         <button
@@ -215,13 +215,14 @@ export const MainNav = () => {
         </div>
              
         {/* Links container */}
-        <div className="lg:flex hidden flex-row justify-center items-center space-x-4   bg-blue-300">
+        <div className="lg:flex hidden flex-row justify-center items-center space-x-4  bg-blue-300" >
         <ul className="flex bg-red-300 ">
             <li
               className="nav-item relative"
               onMouseEnter={() => setHoveredItem('shopAll')}
+             
             >
-              <span className="block py-2 px-4 text-gray-700 hover:text-gray-900 cursor-pointer">Shop All</span>
+              <span className="block py-2 px-4 text-gray-700 hover:text-gray-900 cursor-pointer" >Shop All</span>
               {hoveredItem === 'shopAll' && (
                 <div
                 onMouseLeave={() => setHoveredItem(null)}

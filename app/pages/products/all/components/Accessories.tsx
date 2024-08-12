@@ -44,7 +44,7 @@ const Accessories = () => {
   }
 
   return (
-    <div className=' '>
+    <main className=' '>
       <h1 className="text-start text-xl font-bold">All Accessories</h1>
       <Swiper
                
@@ -90,7 +90,7 @@ const Accessories = () => {
         )}
        </Swiper>
     
-    </div>
+    </main>
   );
 }
 

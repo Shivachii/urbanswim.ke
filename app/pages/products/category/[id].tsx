@@ -43,7 +43,7 @@ const ProductDetail: React.FC = () => {
   }
 
   return (
-    <div className="container">
+    <main className="container">
       <div className="right-column">
         <div className="product-description"> 
           <span>{product.stockQuantity}</span>
@@ -79,7 +79,7 @@ const ProductDetail: React.FC = () => {
           </button>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

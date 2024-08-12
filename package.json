@@ -31,7 +31,8 @@
     "react-scroll": "^1.9.0",
     "spring": "^0.0.0",
     "springboot": "^0.1.0",
-    "swiper": "^11.1.5"
+    "swiper": "^11.1.5",
+    "urbanswim.ke": "file:"
   },
   "devDependencies": {
     "@types/node": "^20",

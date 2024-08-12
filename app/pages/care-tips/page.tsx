@@ -3,7 +3,7 @@ import React from 'react'
 
 const Care = () => {
   return (
-    <div className='pt-10 pb-20'>
+    <main className='pt-10 pb-20'>
         <h1 className='text-center font-bold text-3xl mt-5 '>
          Swimwear Care Tips
         </h1>
@@ -89,7 +89,7 @@ const Care = () => {
             
        </div>
 
-    </div>
+    </main>
   )
 }
 

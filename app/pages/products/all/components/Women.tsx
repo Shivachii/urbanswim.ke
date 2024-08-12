@@ -44,7 +44,7 @@ const Women = () => {
   }
 
   return (
-    <div className=' '>
+    <main className=' '>
       <h1 className="text-start text-xl font-bold">All Women's</h1>
       <Swiper
                
@@ -91,7 +91,7 @@ const Women = () => {
         )}
        </Swiper>
     
-    </div>
+    </main>
   );
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Shipping = () => {
   return (
-    <div className='p-10 my-10 mx-20 text-justify'>
+    <main className='p-10 my-10 mx-20 text-justify'>
     <h1 className='font-bold text-2xl text-center'>
          Urbaneswimke Delivery and Shipping Policy
     </h1>
@@ -98,7 +98,7 @@ const Shipping = () => {
     </ul>
     </div>
     <p className="">Thank you for shopping with Urbaneswimke!</p>
-</div>
+</main>
   )
 }
 

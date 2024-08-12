@@ -45,7 +45,7 @@ const Men = () => {
   }
 
   return (
-    <div className=' '>
+    <main className=' '>
       <h1 className="text-xl text-start font-bold">All Men's</h1>
       <Swiper
                
@@ -91,7 +91,7 @@ const Men = () => {
         )}
        </Swiper>
     
-    </div>
+    </main>
   );
 }
 

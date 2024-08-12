@@ -6,7 +6,7 @@ import Kids from './tables/Kids'
 
 const Fit = () => {
   return (
-    <div className="m-20 mt-5 pt-5 p-20 relative">
+    <main className="m-20 mt-5 pt-5 p-20 relative">
         <h1 className="font-bold text-3xl text-center my-4">
             Urbaneswimke Fit Guide
         </h1>
@@ -106,7 +106,7 @@ const Fit = () => {
 
             
         </div>
-    </div>
+    </main>
   )
 }
 

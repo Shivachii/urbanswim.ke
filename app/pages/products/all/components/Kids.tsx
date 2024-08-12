@@ -44,7 +44,7 @@ const Kids = () => {
   }
 
   return (
-    <div className=' '>
+    <main className=' '>
       <h1 className="text-start text-xl font-bold">All Kid's</h1>
      
               <Swiper
@@ -90,7 +90,7 @@ const Kids = () => {
          
         )}
        </Swiper>
-      </div>
+      </main>
     
   );
 }

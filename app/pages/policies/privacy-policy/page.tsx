@@ -2,7 +2,7 @@ import React from 'react'
 
 const Policy = () => {
   return (
-    <div className='p-10 my-10 mx-20 text-justify'>
+    <main className='p-10 my-10 mx-20 text-justify'>
         <h1 className='font-bold text-2xl text-center'>
             PRIVACY POLICY
         </h1>
@@ -110,7 +110,7 @@ const Policy = () => {
            <li>+254 712 785 836</li> 
         </ul>
         </div>
-    </div>
+    </main>
   )
 }
 

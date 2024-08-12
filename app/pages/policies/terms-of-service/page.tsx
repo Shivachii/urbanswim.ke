@@ -2,7 +2,7 @@ import React from 'react'
 
 const Terms = () => {
   return (
-    <div className='p-10 my-10 mx-20 text-justify'>
+    <main className='p-10 my-10 mx-20 text-justify'>
     <h1 className='font-bold text-2xl text-center'>
     Terms of Service
     </h1>
@@ -127,7 +127,7 @@ const Terms = () => {
     </p>
     </div>
 
-</div>
+</main>
   )
 }
 

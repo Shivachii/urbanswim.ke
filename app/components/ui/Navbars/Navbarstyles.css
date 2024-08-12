@@ -1,0 +1,126 @@
+.navbar {
+    overflow: hidden;
+    
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    text-align: center;
+    padding: 14px 16px;
+    position: relative;
+    color: black;
+   
+  }
+
+  .navbar a::after  {
+    content: '';
+    position: absolute;
+    background-color: black;
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: 0.5px;
+    transition: 0.3s;
+  }
+
+  .navbar a:hover::after{
+    width: 40%;
+  }
+
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+  .dropbtn{
+    color: black;
+  }
+  
+  .dropdown .dropbtn {
+    position: relative;
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .dropdown .dropbtn::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: 0.5px;
+    transition: 0.3s;
+   
+  }
+
+  .dropdown .dropbtn:hover::after{
+    width: 100%;
+  }
+
+ 
+  .dropdown-content, .dropdown-content-other {
+    display: none;
+    position: absolute;
+    background-color: #ffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    
+  }
+  
+  .dropdown-content a, .dropdown-content-other a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+
+  
+  .dropdown:hover .dropdown-content {
+    display: flex;
+  }
+
+  .dropdown:hover  .dropdown-content-other {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Subdrop down */
+
+  .subdropdown {
+    position: relative;
+}
+
+.subdropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #ffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+.subdropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+
+
+.subdropdown:hover .subdropdown-content {
+  display: block;
+}

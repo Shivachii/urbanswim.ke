@@ -12,7 +12,7 @@ const Cards = () => {
   };
 
   return (
-    <div className="relative grid grid-cols-2 gap-4 mx-4">
+    <main className="relative grid grid-cols-2 gap-4 mx-4">
       <div className="w-full  ">
         <Image
           src="/giftcard.png"
@@ -76,7 +76,7 @@ const Cards = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

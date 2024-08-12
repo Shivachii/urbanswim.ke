@@ -271,7 +271,7 @@ const Navbar = () => {
                         </button>
                     {/* Side menu */}
                     <div
-                     className={`p-4 absolute max-w-lg ${isMenuOpen ? 'block' : 'hidden'} mt-16 bg-slate-100 rounded-lg top-5 right-0 z-50 animate-appearance-in h-max overflow-auto max-h-96`} 
+                     className={`p-4 absolute max-w-screen-sm ${isMenuOpen ? 'block' : 'hidden'} mt-16 bg-slate-100 rounded-lg top-5  z-50 animate-appearance-in h-max overflow-auto max-h-[600px]`} 
                      >
                           {/* Close button */}
                       <button
@@ -280,39 +280,39 @@ const Navbar = () => {
                       >
                         <FontAwesomeIcon icon={faTimes} className='w-[20px] h-[20px]' />
                       </button>
-                      <div className="relative flex flex-col space-y-4 p-2 mt-5 m-2">
-                      <ul className='flex flex-col space-y-4 p-4 text-sm  mt-4'>
-            <li className='my-2 hover:font-semibold'>
-                <Link href='' >
-                  <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
-                     Shop All
-                  </p>
-                </Link>
-              </li>
-              <li className='my-2 hover:font-semibold'>
-                <Link href='' >
-                  <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
-                     New Arrivals
-                  </p>
-                </Link>
-              </li>
-              <li className='my-2 hover:font-semibold'>
-                <Link href='' >
-                  <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
-                   Sale
-                  </p>
-                </Link>
-              </li>
-              <li className='my-2 hover:font-semibold'>
-                <Link href='/products/gift-card' >
-                  <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
-                     Gift Cards
-                  </p>
-                </Link>
-              </li>
+                      <div className="relative flex flex-col space-y-4 p-2 mt-5 m-2 text-lg">
+                      <ul className='flex flex-col space-y-4 p-4   mt-4'>
+                      <li className='my-2 hover:font-semibold'>
+                          <Link href='' >
+                            <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
+                              Shop All
+                            </p>
+                          </Link>
+                        </li>
+                        <li className='my-2 hover:font-semibold'>
+                          <Link href='' >
+                            <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
+                              New Arrivals
+                            </p>
+                          </Link>
+                        </li>
+                        <li className='my-2 hover:font-semibold'>
+                          <Link href='' >
+                            <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
+                            Sale
+                            </p>
+                          </Link>
+                        </li>
+                        <li className='my-2 hover:font-semibold'>
+                          <Link href='/products/gift-card' >
+                            <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
+                              Gift Cards
+                            </p>
+                          </Link>
+                        </li>
               </ul>
               {/* Category menu */}
-              <ul className='flex flex-col space-y-4 p-4 text-sm'>
+              <ul className='flex flex-col space-y-4 p-4 '>
               <li className="my-2 font-semibold">Something For Everyone</li>
               <li className='my-2 hover:font-semibold'>
                 <Link href='' >
@@ -361,7 +361,7 @@ const Navbar = () => {
               </li>
             </ul>
             {/* Help meu */}
-              <ul className="flex flex-col space-y-4 p-4 text-sm">
+              <ul className="flex flex-col space-y-4 p-4 ">
                 <li className="font-semibold ">Need Help?</li>
               <li className='my-2 hover:font-semibold'>
                 <Link href='/contact' >

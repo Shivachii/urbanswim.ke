@@ -6,11 +6,11 @@ import Kids from './tables/Kids'
 
 const Fit = () => {
   return (
-    <main className="m-20 mt-5 pt-5 p-20 relative">
-        <h1 className="font-bold text-3xl text-center my-4">
+    <main className="md:m-20 m-2 p-2 mt-5 pt-5 md:p-20 relative">
+        <h1 className="font-bold text-2xl md:text-3xl text-center my-4">
             Urbaneswimke Fit Guide
         </h1>
-        <p className="text-lg">
+        <p className="md:text-lg">
         At Urbaneswimke, we understand that finding the perfect fit 
         is essential for your comfort and style. Our Fit Guide is 
         designed to help you choose the right size for your body type.
@@ -73,7 +73,7 @@ const Fit = () => {
             </ul>
             </div>
             <div className='p-2 m-2'>
-                <h1 className='font-medium text-xl my-2'>
+                <h1 className='font-semibold md:font-medium text-lg md:text-xl my-2'>
                 Use our size charts to find your size
                 </h1>
                 <p>

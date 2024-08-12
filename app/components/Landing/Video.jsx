@@ -5,7 +5,7 @@ const Video = () => {
   return (
     <div className="w-full">
     {/* Container for video */}
-    <div className="relative w-full h-64 sm:h-96">
+    <div className="relative w-96 md:w-full h-64 sm:h-96">
       <video className="w-full h-full object-cover" autoPlay loop muted>
         <source src="/intro.mp4" type="video/mp4" />
         Your browser does not support the video tag.

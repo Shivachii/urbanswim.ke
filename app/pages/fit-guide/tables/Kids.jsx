@@ -4,7 +4,7 @@ import './styles.css'
 const Kids = () => {
   return (
     <div>
-        <table className='p-5 m-5 '>
+        <table className='p-2 m-2 md:p-5 md:m-5 table-auto w-full text-sm md:text-base '>
   <thead>
     <tr>
       <th>Size</th>

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import './Navbarstyles.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowDown, faBars, faCartShopping, faChevronDown, faHeart, faSearch, faTimes, faToggleOn, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faArrowDown, faBars, faCartShopping, faChevronDown, faHeart, faSearch, faTimes, faToggleOn, faPhone, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import Link from 'next/link'
 import CartModal from './Modals/CartModal'
@@ -65,15 +65,24 @@ const Navbar = () => {
     }
    
   return (
-    <nav className="relative flex w-screen md:w-full p-4 max-h-80 bg-gradient-to-r from-slate-100 to-slate-200">
+    <nav className="relative flex flex-col space-y-10 w-screen md:w-full p-4 max-h-80 bg-gradient-to-r from-slate-100 to-slate-200">
            {/* Modals section */}
-      <div className="absolute top-0 right-0 flex flex-row space-x-4 bg-pink-300 p-2 ">
+      <div className="absolute hidden md:flex md:flex-row top-0 right-0  md:space-x-4 p-2 ">
             <div className="flex flex-row space-x-4 m-2 ">
               <Link href=''><FontAwesomeIcon icon={faPhone}/></Link>
               <div className="h-6 w-0.5 bg-black"></div>
               <Link href=''><FontAwesomeIcon icon={faWhatsapp}/></Link>
               <div className="h-6 w-0.5 bg-black"></div>
-              <Link href='/contact'>Help</Link>
+                {/* Guides Dropdown */}
+                <div className="dropdown">
+                            <button className="dropbtnHelp">Help</button>
+                            <div className="dropdown-content-other z-50 animate-appearance-in">
+                            <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Contact us</Link>
+                            <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>FAQ's</Link>
+                            <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Size Guide</Link>
+                            <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Care Tips</Link>
+                            </div>
+                          </div>
               
             </div>
         <ModalLogin/>
@@ -91,7 +100,7 @@ const Navbar = () => {
                         <div className="dropdown">
                           <button className="dropbtn">Shop All
                           </button>
-                              <div className="dropdown-content p-4 z-50">
+                              <div className="dropdown-content p-4 z-50 animate-appearance-in">
                                   {/* Featured */}
                                   <div className='flex flex-col p-2 space-y-2'>
                                     <h1 className='text-gray-500 font-semibold my-2'>Featured</h1>
@@ -117,7 +126,7 @@ const Navbar = () => {
                                     <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>AA - B</Link>
                                     <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>C - DDD</Link>
                                     <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>E - G</Link>
-                                    <Link href="/fit-guide" className='font-medium hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Our Size Guide &rarr;</Link>
+                                    <Link href="/pages/fit-guide" className='font-medium hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Our Size Guide &rarr;</Link>
                                     
                                   </div>
                                   {/* Something Special */}
@@ -131,7 +140,7 @@ const Navbar = () => {
                           {/* Mens Dropdown */}
                           <div className="dropdown">
                             <button className="dropbtn">Men</button>
-                            <div className="dropdown-content-other z-50 ">
+                            <div className="dropdown-content-other z-50 animate-appearance-in">
                             <Link href=""  className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>All Mens</Link>
                             <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Swimwear</Link>
                             <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Accessories</Link>
@@ -140,40 +149,40 @@ const Navbar = () => {
                           {/* Womens Dropdown */}
                           <div className="dropdown">
                               <button className="dropbtn">Women</button>
-                              <div className="dropdown-content-other z-50">
-                                  <a href="#">All Women</a>
-                                  <div className="subdropdown">
-                                      <a href="#" className="subdroplink">One Pieces</a>
-                                      <div className="subdropdown-content">
+                              <div className="dropdown-content-other z-50 animate-appearance-in ">
+                                  <a href="#" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>All Women</a>
+                                  <div className="subdropdown ">
+                                      <a href="#" className="subdroplink hover:translate-x-2 duration-500 hover:underline decoration-slate-500">One Pieces</a>
+                                      <div className="subdropdown-content animate-appearance-in">
                                       <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Monokini</Link>
                                       <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Bikini</Link>
                                       </div>
                                   </div>
                                   <div className="subdropdown">
-                                      <a href="#" className="subdroplink">Two Pieces</a>
-                                      <div className="subdropdown-content">
+                                      <a href="#" className="subdroplink hover:translate-x-2 duration-500 hover:underline decoration-slate-500 ">Two Pieces</a>
+                                      <div className="subdropdown-content animate-appearance-in">
                                       <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Bikini</Link>
                                       <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Burkini</Link>
                                       <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Monokini</Link>
                                       </div>
                                   </div>
                                   <div className="subdropdown">
-                                      <a href="#" className="subdroplink">Three Pieces</a>
-                                      <div className="subdropdown-content">
+                                      <a href="#" className="subdroplink hover:translate-x-2 duration-500 hover:underline decoration-slate-500 ">Three Pieces</a>
+                                      <div className="subdropdown-content animate-appearance-in">
                                       <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Bikini</Link>
                                       <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Burkini</Link>
                                       <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Tankini</Link>
                                       </div>
                                   </div>
                                   <div className="subdropdown">
-                                      <a href="#" className="subdroplink">Four Pieces</a>
-                                      <div className="subdropdown-content">
+                                      <a href="#" className="subdroplink hover:translate-x-2 duration-500 hover:underline decoration-slate-500 ">Four Pieces</a>
+                                      <div className="subdropdown-content animate-appearance-in">
                                       <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Burkini</Link>
                                       </div>
                                   </div>
                                   <div className="subdropdown">
-                                      <a href="#" className="subdroplink">Cover Ups & Shorts</a>
-                                      <div className="subdropdown-content">
+                                      <a href="#" className="subdroplink hover:translate-x-2 duration-500 hover:underline decoration-slate-500 ">Cover Ups & Shorts</a>
+                                      <div className="subdropdown-content animate-appearance-in">
                                       <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Cover Ups</Link>
                                       <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Beach Pants</Link>
                                       <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Beach Shorts</Link>
@@ -185,12 +194,13 @@ const Navbar = () => {
                           {/* Kids Dropdown */}
                           <div className="dropdown">
                             <button className="dropbtn">Children</button>
-                            <div className="dropdown-content-other z-50 ">
+                            <div className="dropdown-content-other z-50 animate-appearance-in">
                             <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>All Children</Link>
                             <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Swimwear</Link>
                             <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Accessories</Link>
                             </div>
                           </div>
+                      
                       
                        
 
@@ -251,7 +261,7 @@ const Navbar = () => {
             {/* CONTAINER FOR SMALL SCREEN NAV */}
               <div className="relative flex sm:flex-row md:hidden  items-center justify-between w-full">
                   {/* Image container */}
-                <div className="bg-[url('/child-friends.jpg')] bg-center bg-cover h-[60px] w-[60px] rounded-full cursor-pointer" onClick={() => router.push('/')}></div>
+                <div className="bg-[url('/logo.jpg')] bg-center bg-cover h-[70px] w-[70px] rounded-full cursor-pointer" onClick={() => router.push('/')}></div>
                     {/* Menu toggler */}
                       <button
                         className='relative'
@@ -271,54 +281,117 @@ const Navbar = () => {
                         <FontAwesomeIcon icon={faTimes} className='w-[20px] h-[20px]' />
                       </button>
                       <div className="relative flex flex-col space-y-4 p-2 mt-5 m-2">
-                                  <div className="flex flex-col space-y-2 w-full">
-                                    <div className="flex items-center space-x-2">
-                                      <p className="flex-1">Who we Are</p>
-                                      <button onClick={handleAbout} className='text-gray-600 hover:text-gray-900'>
-                                      <FontAwesomeIcon 
-                                        icon={faChevronDown}                                          
-                                        className={`transition-transform duration-500 ${isAboutOpen ? 'rotate-180' : ''}`} 
-                                      />
-                                      </button>
-                                      
-                                    </div>
-                                    {isAboutOpen && (
-                                      <div className="flex flex-col space-y-2  transform-all ease-in duration-500 max-h-40 overflow-hidden bg-gray-100 p-2 mt-2">
-                                        <Link href="">About</Link>                  
-                                        <Link href="">Mission and Vision</Link>                                        
-                                      </div>
-                                    )}
-                                  </div>
-                                  <div className="bg-blue-400 w-64 h-0.5"></div>
-                                  <Link href="">Projects</Link>
-                                  <div className="bg-blue-400 w-64 h-0.5"></div>
-
-                                  <div className="flex flex-col space-y-2 w-full">
-                                    <div className="flex items-center space-x-2">
-                                      <p className="flex-1">Get involved</p>
-                                      <button className='text-gray-600 hover:text-gray-900'>
-                                      <FontAwesomeIcon 
-                                        icon={faChevronDown} 
-                                         onClick={handleGetInvolved} 
-                                        className={`transition-transform duration-500  ${isGetInvolved ? 'rotate-180' : ''}`} 
-                                      />
-                                      </button>
-                                    </div>
-                                    {isGetInvolved && (
-                                      <div className="flex flex-col space-y-2  transform-all ease-in duration-500 max-h-40 overflow-hidden bg-gray-100 p-2 mt-2">
-                                        <Link href="">Donate</Link>
-                                        <Link href="">Volunteer</Link>
-                                        <Link href="">Events</Link>
-                                      </div>
-                                    )}
-                                  </div>
-                                  <div className="bg-blue-400 w-64 h-0.5"></div>
-
-                                  <Link href="">News</Link>
-                                  <div className="bg-blue-400 w-64 h-0.5"></div>
-
-                                  <Link href="/pages/contact">Contact</Link>
-                                  <div className="bg-blue-400 w-64 h-0.5"></div>
+                      <ul className='flex flex-col space-y-4 p-4 text-sm  mt-4'>
+            <li className='my-2 hover:font-semibold'>
+                <Link href='' >
+                  <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
+                     Shop All
+                  </p>
+                </Link>
+              </li>
+              <li className='my-2 hover:font-semibold'>
+                <Link href='' >
+                  <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
+                     New Arrivals
+                  </p>
+                </Link>
+              </li>
+              <li className='my-2 hover:font-semibold'>
+                <Link href='' >
+                  <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
+                   Sale
+                  </p>
+                </Link>
+              </li>
+              <li className='my-2 hover:font-semibold'>
+                <Link href='/products/gift-card' >
+                  <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
+                     Gift Cards
+                  </p>
+                </Link>
+              </li>
+              </ul>
+              {/* Category menu */}
+              <ul className='flex flex-col space-y-4 p-4 text-sm'>
+              <li className="my-2 font-semibold">Something For Everyone</li>
+              <li className='my-2 hover:font-semibold'>
+                <Link href='' >
+                  <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
+                     Men
+                  </p>
+                </Link>
+              </li>
+              <li className='my-2 hover:font-semibold'>
+                <Link href='' >
+                  <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
+                   Women
+                  </p>
+                </Link>
+              </li>
+              <li className='my-2 hover:font-semibold'>
+                <Link href='' >
+                  <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
+                     Children
+                  </p>
+                </Link>
+              </li>
+              {/* Modal menu */}
+              <div className='my-4'>
+                <p className='text-sm text-slate-600 font-semibold p-2 m-2'>
+                  Become a member at UrbaneSwim and enjoy exclusive offers and discounts
+                </p>
+                <div className='flex flex-row space-x-4 text-sm'>
+                  <ModalReg />
+                  <ModalLogin />
+                </div>
+              </div>
+              <li className='my-2 hover:font-semibold'>
+                <Link href=''>
+                  <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
+                    <FontAwesomeIcon icon={faCartShopping} /> Orders
+                  </p>
+                </Link>
+              </li>
+              <li className='my-2 hover:font-semibold'>
+                <Link href='' >
+                  <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
+                    <FontAwesomeIcon icon={faLocationDot} /> Our Store
+                  </p>
+                </Link>
+              </li>
+            </ul>
+            {/* Help meu */}
+              <ul className="flex flex-col space-y-4 p-4 text-sm">
+                <li className="font-semibold ">Need Help?</li>
+              <li className='my-2 hover:font-semibold'>
+                <Link href='/contact' >
+                  <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
+                     Contact Us
+                  </p>
+                </Link>
+              </li>
+              <li className='my-2 hover:font-semibold'>
+                <Link href='/Faq' >
+                  <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
+                     Frequently Asked Questions
+                  </p>
+                </Link>
+              </li>
+              <li className='my-2 hover:font-semibold'>
+                <Link href='/care-tips' >
+                  <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
+                  Care Guide
+                  </p>
+                </Link>
+              </li>
+              <li className='my-2 hover:font-semibold'>
+                <Link href='/fit-guide' >
+                  <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
+                  Size Guide
+                  </p>
+                </Link>
+              </li>
+              </ul>
 
                                 </div>
                       </div>

@@ -47,6 +47,12 @@
     font-family: inherit;
     margin: 0;
   }
+
+  .dropdown .dropbtnHelp{
+    position: relative;
+    background-color: inherit;
+    font-family: inherit;
+  }
   
   .dropdown .dropbtn::after {
     content: '';
@@ -70,6 +76,7 @@
     position: absolute;
     background-color: #ffff;
     min-width: 160px;
+    max-width: max-content;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     
   }

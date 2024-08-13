@@ -6,7 +6,7 @@ import Kids from './tables/Kids'
 
 const Fit = () => {
   return (
-    <main className="md:m-20 m-2 p-2 mt-5 pt-5 md:p-20 relative">
+    <main className="md:m-10 m-2 p-2  md:p-8 relative">
         <h1 className="font-bold text-2xl md:text-3xl text-center my-4">
             Urbaneswimke Fit Guide
         </h1>

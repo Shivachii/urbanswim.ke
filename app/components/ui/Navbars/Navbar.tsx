@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import './Navbarstyles.css'
@@ -10,6 +10,7 @@ import Link from 'next/link'
 import CartModal from './Modals/CartModal'
 import ModalLogin from './Modals/Modal';
 import ModalReg from './Modals/ModalRegister';
+import NavMsg from './NavMsg'
 
 
 
@@ -63,10 +64,11 @@ const Navbar = () => {
       setisGetInvolved(!isGetInvolved)
       setisAboutOpen(false)
     }
+  
    
   return (
     <nav className="relative flex flex-col space-y-10 w-screen md:w-full p-4 max-h-80 bg-gradient-to-r from-slate-100 to-slate-200">
-           {/* Modals section */}
+           {/* MODALS SECTION IN LARGER SCREENS */}
       <div className="absolute hidden md:flex md:flex-row top-0 right-0  md:space-x-4 p-2 ">
             <div className="flex flex-row space-x-4 m-2 ">
               <Link href=''><FontAwesomeIcon icon={faPhone}/></Link>
@@ -88,7 +90,7 @@ const Navbar = () => {
         <ModalLogin/>
         <ModalReg/>
       </div>
-            {/* CONTAINER FOR LINKS and LOGO */}
+            {/* CONTAINER FOR LINKS and LOGO FOR LARGER SCREENS */}
             <div className="hidden md:flex flex-row items-center justify-between w-full ">
                 {/* LOGO CONTAINER */}
                 <div className="bg-[url('/logo.jpg')] bg-center bg-cover h-[80px] w-[80px] rounded-full cursor-pointer" onClick={() => router.push('/')}></div>
@@ -259,7 +261,16 @@ const Navbar = () => {
         </div>
             
             {/* CONTAINER FOR SMALL SCREEN NAV */}
-              <div className="relative flex sm:flex-row md:hidden  items-center justify-between w-full">
+            <div className=" flex flex-col space-y-4 md:hidden w-full">
+                {/* CONTAINER FOR WELCOME MSG AND QUICK LINKS */}
+                <div className="absolute top-0 flex flex-col h-max  text-white bg-black ">
+                    <div className=" ">
+                        <NavMsg/>
+                      </div>
+                </div>
+
+              {/* SM CONTAINER FOR LINKS AND LOGO */}
+            <div className=" flex sm:flex-row md:hidden  items-center justify-between w-full">
                   {/* Image container */}
                 <div className="bg-[url('/logo.jpg')] bg-center bg-cover h-[70px] w-[70px] rounded-full cursor-pointer" onClick={() => router.push('/')}></div>
                     {/* Menu toggler */}
@@ -396,6 +407,8 @@ const Navbar = () => {
                                 </div>
                       </div>
               </div>
+            </div>
+              
         </nav>
 
   )

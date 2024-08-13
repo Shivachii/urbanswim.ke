@@ -245,7 +245,7 @@ const Navbar = () => {
                 <div className=" flex flex-col h-max justify-center items-center text-center">
                     {/* TEXT */}
                     <div className="font-bold text-xl">
-                        URBANESWIM KENYA
+                        <Link href='/'>URBANESWIM KENYA</Link>
                       </div>
                 </div>
 

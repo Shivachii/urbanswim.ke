@@ -2,11 +2,11 @@ import React from "react";
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure, Input } from "@nextui-org/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 export default function SearchModal() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  const router = useRouter();  // Corrected import for useRouter
+  const router = useRouter();  
 
   // Handle search params
   const handleSearch = (e) => {

@@ -12,7 +12,7 @@ const Cards = () => {
   };
 
   return (
-    <main className="relative grid grid-cols-2 gap-4 mx-4">
+    <main className="relative grid grid-cols-1 md:grid md:grid-cols-2 gap-4 mx-4">
       <div className="w-full  ">
         <Image
           src="/giftcard.png"
@@ -28,7 +28,7 @@ const Cards = () => {
           {selectedDenomination && <div><p>Ksh {selectedDenomination}</p></div>}
         </h3>
         <h4 className="mt-8 text-gray-500">Denominations</h4>
-        <div className="flex flex-wrap space-x-2 mt-2">
+        <div className="flex flex-row flex-wrap justify-items-center items-center justify-start gap-2 md:gap-4 mt-2">
   {[2000, 3000, 4000, 5000, 6000, 8000, 10000, 15000, 20000].map((amount) => (
     <button
       key={amount}
@@ -44,9 +44,9 @@ const Cards = () => {
 
         <div className="mt-8 p-2">
           <h3 className="font-light">Amount + </h3>
-          <div className="flex flex-row space-x-8 mt-2">
+          <div className="flex flex-col space-y-4 md:flex md:flex-row md:space-x-8 mt-2">
             <Counter />
-            <button className="bg-black text-white hover:opacity-90 px-28 py-2">
+            <button className="bg-black text-white hover:opacity-90 md:px-28 px-8 py-4 md:py-2">
               Add to Cart
             </button>
           </div>
@@ -60,7 +60,7 @@ const Cards = () => {
           </p>
           <p className='text-sm mt-2'>
           It may take up to 1 business day to receive your gift card information.
-           If you have any questions, please email our customer service team through our <Link href='/contact' className='hover:underline underline-offset-4 decoration-slate-500 decoration-2'> contact page.
+           If you have any questions, please email our customer service team through our <Link href='/pages/contact' className='hover:underline underline-offset-4 decoration-slate-500 decoration-2 font-bold'> contact page.
            </Link> 
           </p>
         </div>

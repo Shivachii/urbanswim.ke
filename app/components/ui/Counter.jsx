@@ -23,7 +23,7 @@ const Counter = () => {
   };
 
   return (
-    <div className="flex items-center space-x-4 border border-gray-300 ">
+    <div className="flex items-center justify-center space-x-4 border border-gray-300 ">
       <button
         onClick={decrement}
         className="px-4 py-2  rounded-md"
@@ -35,7 +35,7 @@ const Counter = () => {
         name="count"
         value={count}
         onChange={handleInputChange}
-        className="w-16 text-center  rounded-md outline-none"
+        className="w-16  text-center  rounded-md outline-none"
       />
       <button
         onClick={increment}

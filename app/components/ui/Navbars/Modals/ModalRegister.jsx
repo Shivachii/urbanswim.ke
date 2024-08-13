@@ -12,7 +12,7 @@ export default function ModalReg() {
       <Modal 
         isOpen={isOpen} 
         onOpenChange={onOpenChange}
-        placement="top-center"
+        placement="center"
       >
         <ModalContent>
           {(onClose) => (
@@ -53,9 +53,7 @@ export default function ModalReg() {
                   >
                     Remember me
                   </Checkbox>
-                  <Link color="primary" href="#" size="sm">
-                    Forgot password?
-                  </Link>
+                  
                 </div>
               </ModalBody>
               <ModalFooter>

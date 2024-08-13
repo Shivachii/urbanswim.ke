@@ -3,7 +3,7 @@ import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDis
 import {MailIcon} from './MailIcon.jsx';
 import {LockIcon} from './LockIcon.jsx';
 
-export default function ModalLogin() {
+export default function ModalLog() {
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
 
   return (
@@ -12,7 +12,7 @@ export default function ModalLogin() {
       <Modal 
         isOpen={isOpen} 
         onOpenChange={onOpenChange}
-        placement="top-center"
+        placement="center"
       >
         <ModalContent>
           {(onClose) => (

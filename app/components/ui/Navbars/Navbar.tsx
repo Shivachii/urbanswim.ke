@@ -1,28 +1,27 @@
 "use client"
-import React, { useEffect, useState } from 'react'
-import Image from 'next/image'
+import React, {  useState } from 'react'
 import { useRouter } from 'next/navigation'
 import './Navbarstyles.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowDown, faBars, faCartShopping, faChevronDown, faHeart, faSearch, faTimes, faToggleOn, faPhone, faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import {   faCartShopping,  faHeart, faSearch, faPhone  } from '@fortawesome/free-solid-svg-icons'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import Link from 'next/link'
 import CartModal from './Modals/CartModal'
-import ModalLogin from './Modals/Modal';
+import ModalLog from './Modals/ModalLogin'
 import ModalReg from './Modals/ModalRegister';
-import NavMsg from './NavMsg'
+import UserModal from './Modals/UserModal'
+import SideMenuModal from './Modals/SideMenuModal'
+import SearchModal from './Modals/SearchModal'
 
 
 
 const Navbar = () => {
     const router = useRouter()
-    const [isMenuOpen, setisMenuOpen] = useState(false);
-    const [isAboutOpen, setisAboutOpen] = useState(false);
-    const [isGetInvolved, setisGetInvolved] = useState(false);
     const [isCartOpen, setIsCartOpen] = useState(false);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
+   
 
-    // Handle Cart And Search Opening and closing
+    // Handle Cart, User And Search Opening and closing
     const handleCartOpen = () => {
       setIsCartOpen(!isCartOpen);
       setIsSearchOpen(false)
@@ -31,9 +30,8 @@ const Navbar = () => {
     const handleSearchOpen = () => {
       setIsSearchOpen(!isSearchOpen);
       setIsCartOpen(false)
-      
-  
     };
+    
 
     // Handle swarch params
     const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
@@ -46,30 +44,11 @@ const Navbar = () => {
       }
     };
 
-    // Handle menu toggle
-    const menuToggle =() =>{
-      setisMenuOpen(!isMenuOpen);
-    };
-    const handleClose = () => {
-      // Close the menu
-      setisMenuOpen(false);
-    };
-   
-    // Handle About dropdown
-    const handleAbout =() =>{
-      setisAboutOpen(!isAboutOpen)
-      setisGetInvolved(false)
-    };
-    const handleGetInvolved =() =>{
-      setisGetInvolved(!isGetInvolved)
-      setisAboutOpen(false)
-    }
-  
-   
+    
   return (
-    <nav className="relative flex flex-col space-y-10 w-screen md:w-full p-4 max-h-80 bg-gradient-to-r from-slate-100 to-slate-200">
+    <nav className="relative flex flex-col w-screen md:w-full p-4 max-h-80 bg-gradient-to-r from-slate-100 to-slate-200">
            {/* MODALS SECTION IN LARGER SCREENS */}
-      <div className="absolute hidden md:flex md:flex-row top-0 right-0  md:space-x-4 p-2 ">
+      <div className=" hidden md:flex md:flex-row justify-end items-end  md:space-x-4  ">
             <div className="flex flex-row space-x-4 m-2 ">
               <Link href=''><FontAwesomeIcon icon={faPhone}/></Link>
               <div className="h-6 w-0.5 bg-black"></div>
@@ -87,7 +66,7 @@ const Navbar = () => {
                           </div>
               
             </div>
-        <ModalLogin/>
+        <ModalLog/>
         <ModalReg/>
       </div>
             {/* CONTAINER FOR LINKS and LOGO FOR LARGER SCREENS */}
@@ -209,9 +188,9 @@ const Navbar = () => {
                     </div>
                 </div>
                 
-                {/* DONATE BUTTON */}
+                {/* SEARCH FORM */}
                 <div className="flex">
-                <form className="items-center lg:flex hidden" >
+                <form className="items-center lg:flex hidden" onSubmit={handleSearch}>
           <input
             className="form-input px-4 py-2 placeholder-slate-500  rounded-lg border border-gray-300"
             type="search"
@@ -263,149 +242,34 @@ const Navbar = () => {
             {/* CONTAINER FOR SMALL SCREEN NAV */}
             <div className=" flex flex-col space-y-4 md:hidden w-full">
                 {/* CONTAINER FOR WELCOME MSG AND QUICK LINKS */}
-                <div className="absolute top-0 flex flex-col h-max  text-white bg-black ">
-                    <div className=" ">
-                        <NavMsg/>
+                <div className=" flex flex-col h-max justify-center items-center text-center">
+                    {/* TEXT */}
+                    <div className="font-bold text-xl">
+                        URBANESWIM KENYA
                       </div>
                 </div>
 
               {/* SM CONTAINER FOR LINKS AND LOGO */}
             <div className=" flex sm:flex-row md:hidden  items-center justify-between w-full">
-                  {/* Image container */}
-                <div className="bg-[url('/logo.jpg')] bg-center bg-cover h-[70px] w-[70px] rounded-full cursor-pointer" onClick={() => router.push('/')}></div>
-                    {/* Menu toggler */}
-                      <button
-                        className='relative'
-                        onClick={menuToggle}
-                      >
-                      <FontAwesomeIcon icon={faBars}  className='relative '/>
-                        </button>
-                    {/* Side menu */}
-                    <div
-                     className={`p-4 absolute max-w-screen-sm ${isMenuOpen ? 'block' : 'hidden'} mt-16 bg-slate-100 rounded-lg top-5  z-50 animate-appearance-in h-max overflow-auto max-h-[600px]`} 
-                     >
-                          {/* Close button */}
-                      <button
-                        onClick={handleClose}
-                        className="absolute top-0 right-0 text-gray-600 hover:text-gray-900 p-2 m-2"
-                      >
-                        <FontAwesomeIcon icon={faTimes} className='w-[20px] h-[20px]' />
-                      </button>
-                      <div className="relative flex flex-col space-y-4 p-2 mt-5 m-2 text-lg">
-                      <ul className='flex flex-col space-y-4 p-4   mt-4'>
-                      <li className='my-2 hover:font-semibold'>
-                          <Link href='' >
-                            <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
-                              Shop All
-                            </p>
-                          </Link>
-                        </li>
-                        <li className='my-2 hover:font-semibold'>
-                          <Link href='' >
-                            <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
-                              New Arrivals
-                            </p>
-                          </Link>
-                        </li>
-                        <li className='my-2 hover:font-semibold'>
-                          <Link href='' >
-                            <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
-                            Sale
-                            </p>
-                          </Link>
-                        </li>
-                        <li className='my-2 hover:font-semibold'>
-                          <Link href='/products/gift-card' >
-                            <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
-                              Gift Cards
-                            </p>
-                          </Link>
-                        </li>
-              </ul>
-              {/* Category menu */}
-              <ul className='flex flex-col space-y-4 p-4 '>
-              <li className="my-2 font-semibold">Something For Everyone</li>
-              <li className='my-2 hover:font-semibold'>
-                <Link href='' >
-                  <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
-                     Men
-                  </p>
-                </Link>
-              </li>
-              <li className='my-2 hover:font-semibold'>
-                <Link href='' >
-                  <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
-                   Women
-                  </p>
-                </Link>
-              </li>
-              <li className='my-2 hover:font-semibold'>
-                <Link href='' >
-                  <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
-                     Children
-                  </p>
-                </Link>
-              </li>
-              {/* Modal menu */}
-              <div className='my-4'>
-                <p className='text-sm text-slate-600 font-semibold p-2 m-2'>
-                  Become a member at UrbaneSwim and enjoy exclusive offers and discounts
-                </p>
-                <div className='flex flex-row space-x-4 text-sm'>
-                  <ModalReg />
-                  <ModalLogin />
-                </div>
-              </div>
-              <li className='my-2 hover:font-semibold'>
-                <Link href=''>
-                  <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
-                    <FontAwesomeIcon icon={faCartShopping} /> Orders
-                  </p>
-                </Link>
-              </li>
-              <li className='my-2 hover:font-semibold'>
-                <Link href='' >
-                  <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
-                    <FontAwesomeIcon icon={faLocationDot} /> Our Store
-                  </p>
-                </Link>
-              </li>
-            </ul>
-            {/* Help meu */}
-              <ul className="flex flex-col space-y-4 p-4 ">
-                <li className="font-semibold ">Need Help?</li>
-              <li className='my-2 hover:font-semibold'>
-                <Link href='/contact' >
-                  <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
-                     Contact Us
-                  </p>
-                </Link>
-              </li>
-              <li className='my-2 hover:font-semibold'>
-                <Link href='/Faq' >
-                  <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
-                     Frequently Asked Questions
-                  </p>
-                </Link>
-              </li>
-              <li className='my-2 hover:font-semibold'>
-                <Link href='/care-tips' >
-                  <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
-                  Care Guide
-                  </p>
-                </Link>
-              </li>
-              <li className='my-2 hover:font-semibold'>
-                <Link href='/fit-guide' >
-                  <p className='hover:underline underline-offset-8 decoration-2 decoration-purple-800'>
-                  Size Guide
-                  </p>
-                </Link>
-              </li>
-              </ul>
-
-                                </div>
+                      
+                      {/* Menu toggler */}
+                      <SideMenuModal/>
+                      
+                      {/* CART, SEARCH ACCOUNT AND WISHLIST */}
+                      <div className="flex flex-row space-x-4 p-2 m-2">
+                          {/* SEARCH */}
+                            <button>
+                              <SearchModal/>
+                            </button>
+                            <button>
+                               <UserModal/>
+                            </button>                        
+                          <Link href="">
+                          <FontAwesomeIcon icon={faHeart} className='w-[20px] h-[20px]'/>
+                          </Link>                       
                       </div>
+                  {/* Image container */}
+                {/* <div className="bg-[url('/logo.jpg')] bg-center bg-cover h-[65px] w-[65px] rounded-full cursor-pointer" onClick={() => router.push('/')}></div> */}
               </div>
             </div>
               

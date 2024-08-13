@@ -18,9 +18,9 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"] 
     }
   },
-  "include": ["video.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["video.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/ui/Navbars/Modals/ModalLogin.jsx", "app/components/ui/Navbars/Modals/SideMenuModal.jsx", "app/components/ui/Navbars/Modals/SearchModal.jsx"],
   "exclude": ["node_modules"]
 }

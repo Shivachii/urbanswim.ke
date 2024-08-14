@@ -34,7 +34,7 @@ export default function SideMenuModal() {
               <ModalBody>
               <ModalHeader className="flex flex-col space-y-2 text-center mb-0 pb-0">
                 <h1> URBANESWIM KENYA</h1>
-                <p className="font-normal text-base text-start "> Kenya's closet for premium swimwear for both men and women</p>
+                <p className="font-normal text-base text-start "> Kenya&apos;s closet for premium swimwear for both men and women</p>
               </ModalHeader>
                      {/* Side menu */}                    
                       <div className="relative flex flex-col space-y-2 p-2  m-2 text-lg text-black">

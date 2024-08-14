@@ -77,7 +77,7 @@ const Fit = () => {
                 Use our size charts to find your size
                 </h1>
                 <p>
-                Remember, the perfect body is the one you already have. Let's embrace our bodies with love and positivity, 
+                Remember, the perfect body is the one you already have. Let&apos;s embrace our bodies with love and positivity, 
                 and let your inner beauty radiate with every step you take. You are beautiful, just the way you are !
                 </p>
                 <div className="p-2 m-2">

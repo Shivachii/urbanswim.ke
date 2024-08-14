@@ -10,7 +10,7 @@ const Terms = () => {
     Effective Date: [Insert Date]
     </p>
     <p>
-    Welcome to Urbaneswimke! These Terms of Service ("Terms") govern your use of our website, mobile application, and any other services we provide (collectively, the "Services"). By accessing or using our Services, you agree to be bound by these Terms.
+    Welcome to Urbaneswimke! These Terms of Service (&quot;Terms&quot;) govern your use of our website, mobile application, and any other services we provide (collectively, the &quot;Services&quot;). By accessing or using our Services, you agree to be bound by these Terms.
     </p>
    <div className='p-2 m-2'>
    <h1 className='font-medium text-lg'>

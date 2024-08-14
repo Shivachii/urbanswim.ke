@@ -25,7 +25,7 @@ export default function UserModal() {
               <ModalBody>
               <ModalHeader className="flex flex-col gap-1 text-center">
                 <h1>WELCOME TO URBANESWIM KENYA</h1>
-                <p className="font-normal text-sm"> Kenya's closet for premium swimwear for both men and women</p>
+                <p className="font-normal text-sm"> Kenya&apos;s closet for premium swimwear for both men and women</p>
               </ModalHeader>
                 <div className="flex py-2 px-1 items-center justify-center space-x-4">
                   <ModalReg/>

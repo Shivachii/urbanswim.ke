@@ -45,7 +45,7 @@ const Kids = () => {
 
   return (
     <main className=' '>
-      <h1 className="text-start text-xl font-bold">All Kid's</h1>
+      <h1 className="text-start text-xl font-bold">All Kid&apos;s</h1>
      
               <Swiper
                

@@ -15,7 +15,7 @@ const Guidlelines = () => {
                 <p>
                     Our customer service team is available to answer your questions, 
                     and we love hearing about your experiences with UrbaneSwimKe. 
-                    We've put together a helpful list of FAQs, including sections
+                    We&apos;ve put together a helpful list of FAQs, including sections
                     for general inquiries and international shoppers.
                     Additionally, our fit guide is designed to help you find your perfect fit.
                 </p>

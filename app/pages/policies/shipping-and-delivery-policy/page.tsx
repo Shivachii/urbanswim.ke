@@ -57,7 +57,7 @@ const Shipping = () => {
     5. Tracking Your Order
     </h1>
     <p>
-    Once your order has been shipped, you will receive a confirmation email with a tracking number. You can use this number to track the status of your shipment through the carrier's website.
+    Once your order has been shipped, you will receive a confirmation email with a tracking number. You can use this number to track the status of your shipment through the carrier&apos;s website.
     </p>
     
     </div>

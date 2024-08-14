@@ -46,7 +46,7 @@ const Men = () => {
 
   return (
     <main className=' '>
-      <h1 className="text-xl text-start font-bold">All Men's</h1>
+      <h1 className="text-xl text-start font-bold">All Men&apos;s</h1>
       <Swiper
                
                spaceBetween={30}

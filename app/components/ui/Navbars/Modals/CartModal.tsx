@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link'
 import React from 'react'
+import Image from 'next/image'
 
 const CartModal = () => {
 
@@ -23,7 +24,7 @@ const CartModal = () => {
             <h2 className='font-bold'>Shopping Cart</h2>
             {/* ITEM */}
                <div className='flex gap-4'>
-            <img src="/bag.jpg" alt="" height={96} width={70}
+            <Image src="/bag.jpg" alt="" height={96} width={70}
             className='rounded-md object-cover'
             />
             <div className="flex flex-col justify-between w-full">
@@ -52,7 +53,7 @@ const CartModal = () => {
           </div> 
           {/* ITEM 2 */}
           <div className='flex gap-4'>
-            <img src="/bag.jpg" alt="" height={96} width={70}
+            <Image src="/bag.jpg" alt="" height={96} width={70}
             className='rounded-md object-cover'
             />
             <div className="flex flex-col justify-between w-full">

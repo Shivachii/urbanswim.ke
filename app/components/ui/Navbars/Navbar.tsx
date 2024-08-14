@@ -59,7 +59,7 @@ const Navbar = () => {
                             <button className="dropbtnHelp">Help</button>
                             <div className="dropdown-content-other z-50 animate-appearance-in">
                             <Link href="/pages/contact" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Contact us</Link>
-                            <Link href="/pages/faq" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>FAQ's</Link>
+                            <Link href="/pages/faq" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>FAQ&apos;s</Link>
                             <Link href="/pages/fit-guide" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Size Guide</Link>
                             <Link href="/pages/care-tips" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Care Tips</Link>
                             </div>

@@ -46,7 +46,7 @@ const Navbar = () => {
 
     
   return (
-    <nav className="relative flex flex-col w-screen md:w-full p-4 max-h-80 bg-gradient-to-r from-slate-100 to-slate-200">
+    <nav className=" flex flex-col w-screen md:w-full p-4 max-h-80 bg-gradient-to-r from-slate-100/75 to-slate-200/75 backdrop-blur-lg sticky top-0 z-10">
            {/* MODALS SECTION IN LARGER SCREENS */}
       <div className=" hidden md:flex md:flex-row justify-end items-end  md:space-x-4  ">
             <div className="flex flex-row space-x-4 m-2 ">
@@ -58,10 +58,10 @@ const Navbar = () => {
                 <div className="dropdown">
                             <button className="dropbtnHelp">Help</button>
                             <div className="dropdown-content-other z-50 animate-appearance-in">
-                            <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Contact us</Link>
-                            <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>FAQ's</Link>
-                            <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Size Guide</Link>
-                            <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Care Tips</Link>
+                            <Link href="/pages/contact" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Contact us</Link>
+                            <Link href="/pages/faq" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>FAQ's</Link>
+                            <Link href="/pages/fit-guide" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Size Guide</Link>
+                            <Link href="/pages/care-tips" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Care Tips</Link>
                             </div>
                           </div>
               
@@ -89,7 +89,7 @@ const Navbar = () => {
                                     <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Sale</Link>
                                     <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Bags</Link>
                                     <Link
-                                      href="/products/gift-cards"
+                                      href="/pages/products/gift-cards"
                                       className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Gift Cards</Link>
                                   </div>
                                   {/* Category */}

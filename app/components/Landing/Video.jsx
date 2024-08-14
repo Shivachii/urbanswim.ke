@@ -11,7 +11,7 @@ const Video = () => {
         Your browser does not support the video tag.
       </video>
       <div className="absolute inset-0 flex items-center justify-center">
-        <p className="text-white text-xl sm:text-3xl font-bold z-20">
+        <p className="text-white text-xl sm:text-3xl font-bold z-auto">
           URBANE SWIM KENYA
         </p>
       </div>

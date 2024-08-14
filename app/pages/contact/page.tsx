@@ -11,10 +11,7 @@ const Contact = () => {
         <div className="">
           <Guidlelines/>
         </div>
-        {/* Contact form Container */}
-          <div className="">
-            <Contact/>
-          </div>    
+        
     </main>             
 
   );

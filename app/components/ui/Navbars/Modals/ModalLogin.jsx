@@ -49,6 +49,7 @@ export default function ModalLog() {
                     required
                     name="email"
                     onChange={(e) => setEmail(e.target.value)}
+                    className="valid:border-green-500 invalid:border-red-500"
                   />
                   <Input
                     endContent={
@@ -62,6 +63,7 @@ export default function ModalLog() {
                     required
                     minLength={6}
                     onChange={(e) => setPassword(e.target.value)}
+                      className="valid:border-green-500 invalid:border-red-500"
                   />
                   <div className="flex py-2 px-1 justify-between">
                     <Checkbox
@@ -75,7 +77,7 @@ export default function ModalLog() {
                       Forgot password?
                     </Link>
                   </div>
-                  {error && <p className="text-red-500">{error}</p>} {/* Display error message */}
+                  {/* {error && <p className="text-red-500 text-sm">{"Email address or Password were incorrect "  }</p>} Display error message */}
                 </form>
               </ModalBody>
               <ModalFooter>
@@ -83,7 +85,7 @@ export default function ModalLog() {
                   Close
                 </Button>
                 <Button color="primary" type="submit" onPress={handleSignIn}>
-                  Sign in
+                  Log in
                 </Button>
               </ModalFooter>
             </>

@@ -51,8 +51,10 @@ export default function ModalReg() {
                     variant="bordered"
                     value={email}
                     name="email"
+                    id="email"
                     required
                     onChange={(e) => setEmail(e.target.value)}
+                     className="required:border-red-500 valid:border-green-500 invalid:border-red-500"
                   />
                   <Input
                     endContent={
@@ -67,6 +69,7 @@ export default function ModalReg() {
                     required
                     minLength={6}
                     onChange={(e) => setPassword(e.target.value)}
+                      className="valid:border-green-500 invalid:border-red-500"
                   />
                   <div className="flex py-2 px-1 justify-between">
                     <Checkbox

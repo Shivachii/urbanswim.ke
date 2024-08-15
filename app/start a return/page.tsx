@@ -6,7 +6,7 @@ const StartReturn = () => {
       <div className="container mx-auto px-4">
         <h1 className="text-3xl font-bold text-center mb-8">Start a Return</h1>
         <p className="mb-4 text-center">
-          We understand that sometimes things don't work out. If you need to start a return, we're here to help. You can reach us through one of the following methods:
+          We understand that sometimes things don&apos;t work out. If you need to start a return, we&apos;re here to help. You can reach us through one of the following methods:
         </p>
 
         <div className="flex flex-col items-center">

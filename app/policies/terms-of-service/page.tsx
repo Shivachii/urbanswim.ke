@@ -17,7 +17,7 @@ const TermsOfService = () => {
 
         <h2 className="text-2xl font-semibold mb-4">2. Use of Our Website</h2>
         <p className="mb-4">
-          You may use our website for lawful purposes only. You agree not to use our website in any way that could damage, disable, or impair our services, or interfere with others' use and enjoyment of the site.
+          You may use our website for lawful purposes only. You agree not to use our website in any way that could damage, disable, or impair our services, or interfere with others&apos; use and enjoyment of the site.
         </p>
 
         <h2 className="text-2xl font-semibold mb-4">3. Product Information</h2>

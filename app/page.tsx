@@ -1,5 +1,5 @@
 import React from 'react';
-import Slider from './components/ui/Slider';
+import Slider from './components/ui/Slider/Slider';
 import Video from './components/Landing/Video';
 import Collection from './components/Landing/Collection' 
 import NewArrivals from './components/Landing/NewArrivals'

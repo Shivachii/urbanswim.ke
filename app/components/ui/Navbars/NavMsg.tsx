@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react'
-import  { introMsg } from  '@/app/data/data'
+import  { introMsg } from  '@/app/lib/data'
 
 const NavMsg = () => {
   const [currentMsgIndex, setCurrentMsgIndex] = useState(() => {

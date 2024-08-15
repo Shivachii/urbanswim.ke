@@ -34,9 +34,9 @@ export const Footer = () => {
                               </Link>
                           </li>
                       <li className='m-2 '>
-                              <Link href='/Faq' onClick={() => scrolltoHash('Delivery')} className='hover:cursor-pointer'
+                              <Link href='/start a return'  className='hover:cursor-pointer'
                               >
-                                  <p className='hover:translate-x-2 duration-200 hover:underline decoration-2 underline-offset-4 decoration-slate-400'> Shipping and Delivery</p>  
+                                  <p className='hover:translate-x-2 duration-200 hover:underline decoration-2 underline-offset-4 decoration-slate-400'> Start a Return</p>  
                               </Link>
                           </li>
                           <li className='m-2 '>

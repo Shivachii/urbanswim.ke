@@ -20,7 +20,7 @@ export const Footer = () => {
                       </h1>
                       <ul className=' m-2'>
                       <li className='m-2 '>
-                              <Link href='/Faq' 
+                              <Link href='/faq' 
                                   className='hover:cursor-pointer'
                                   >
                                   <p className='hover:translate-x-2 duration-200 hover:underline decoration-2 underline-offset-4 decoration-slate-400'> Frequently Asked Questions</p>  

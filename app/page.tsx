@@ -1,8 +1,8 @@
 import React from 'react';
-import Slider from './components/ui/Slider/Slider';
-import Video from './components/Landing/Video';
-import Collection from './components/Landing/Collection' 
-import NewArrivals from './components/Landing/NewArrivals'
+import Slider from './components/Slider/Slider';
+import Video from './landing/Video';
+import Collection from './landing/Collection' 
+import NewArrivals from './landing/NewArrivals'
 
 const Home = () => {
   return (

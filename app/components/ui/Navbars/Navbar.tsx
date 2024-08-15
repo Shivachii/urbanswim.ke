@@ -4,14 +4,14 @@ import { useRouter } from 'next/navigation'
 import './Navbarstyles.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {   faCartShopping,  faHeart, faSearch, faPhone  } from '@fortawesome/free-solid-svg-icons'
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import Link from 'next/link'
-import CartModal from './Modals/CartModal'
-import ModalLog from './Modals/ModalLogin'
-import ModalReg from './Modals/ModalRegister';
-import UserModal from './Modals/UserModal'
-import SideMenuModal from './Modals/SideMenuModal'
-import SearchModal from './Modals/SearchModal'
+import CartModal from '../Modals/CartModal'
+import ModalLog from '../Modals/ModalLogin'
+import ModalReg from '../Modals/ModalRegister';
+import UserModal from '../Modals/UserModal'
+import SideMenuModal from '../Modals/SideMenuModal'
+import SearchModal from '../Modals/SearchModal'
 
 
 
@@ -60,10 +60,10 @@ const Navbar = () => {
                 <div className="dropdown">
                             <button className="dropbtnHelp">Help</button>
                             <div className="dropdown-content-other z-50 animate-appearance-in">
-                            <Link href="/pages/contact" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Contact us</Link>
-                            <Link href="/pages/faq" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>FAQ&apos;s</Link>
-                            <Link href="/pages/fit-guide" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Size Guide</Link>
-                            <Link href="/pages/care-tips" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Care Tips</Link>
+                            <Link href="/contact" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Contact us</Link>
+                            <Link href="/faq" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>FAQ&apos;s</Link>
+                            <Link href="/fit-guide" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Size Guide</Link>
+                            <Link href="/care-tips" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Care Tips</Link>
                             </div>
                           </div>
               
@@ -91,7 +91,7 @@ const Navbar = () => {
                                     <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Sale</Link>
                                     <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Bags</Link>
                                     <Link
-                                      href="/pages/products/gift-cards"
+                                      href="/products/gift-cards"
                                       className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Gift Cards</Link>
                                   </div>
                                   {/* Category */}
@@ -109,7 +109,7 @@ const Navbar = () => {
                                     <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>AA - B</Link>
                                     <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>C - DDD</Link>
                                     <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>E - G</Link>
-                                    <Link href="/pages/fit-guide" className='font-medium hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Our Size Guide &rarr;</Link>
+                                    <Link href="/fit-guide" className='font-medium hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Our Size Guide &rarr;</Link>
                                     
                                   </div>
                                   {/* Something Special */}

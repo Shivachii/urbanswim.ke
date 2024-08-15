@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const Care = () => {
+const Page = () => {
   return (
     <main className='pt-10 pb-20'>
         <h1 className='text-center font-bold text-3xl mt-5 '>
@@ -93,4 +93,4 @@ const Care = () => {
   )
 }
 
-export default Care 
+export default Page

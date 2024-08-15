@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Counter from '@/app/components/ui/Counter';
+import Counter from '@/app/components/ui/Counter/Counter';
 import Link from 'next/link';
 
 const Cards = () => {

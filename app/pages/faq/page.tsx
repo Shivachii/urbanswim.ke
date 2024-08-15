@@ -1,4 +1,4 @@
-'use client'
+
 import React from 'react'
 import Link from 'next/link'
 import Returns from './Accordions/Accordion'
@@ -13,7 +13,7 @@ const Faq = () => {
   }
   return (
       <main className='bg-white py-10 my-10  '>
-          <h1 className='font-bold text-center text-2xl pb-4 mb-4'>
+          <h1 className='font-bold text-center text-xl pb-4 mb-4'>
               Frequently Asked Questions
           </h1>
               <div className=' flex'>

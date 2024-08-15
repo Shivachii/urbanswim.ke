@@ -61,7 +61,7 @@ export default function SideMenuModal() {
                           </Link>
                         </li>
                         <li className='my-2 hover:font-semibold'>
-                          <Link href='/pages/products/gift-card' >
+                          <Link href='/products/gift-card' >
                             <p className='hover:underline underline-offset-8 decoration-2 decoration-black'>
                               Gift Cards
                             </p>
@@ -121,28 +121,28 @@ export default function SideMenuModal() {
               <ul className="flex flex-col space-y-4 p-4 ">
                 <li className="font-semibold ">Need Help?</li>
               <li className='my-2 hover:font-semibold'>
-                <Link href='/pages/contact' >
+                <Link href='/contact' >
                   <p className='hover:underline underline-offset-8 decoration-2 decoration-black'>
                      Contact Us
                   </p>
                 </Link>
               </li>
               <li className='my-2 hover:font-semibold'>
-                <Link href='/pages/faq' >
+                <Link href='/faq' >
                   <p className='hover:underline underline-offset-8 decoration-2 decoration-black'>
                      Frequently Asked Questions
                   </p>
                 </Link>
               </li>
               <li className='my-2 hover:font-semibold'>
-                <Link href='/pages/care-tips' >
+                <Link href='/care-tips' >
                   <p className='hover:underline underline-offset-8 decoration-2 decoration-black'>
                   Care Guide
                   </p>
                 </Link>
               </li>
               <li className='my-2 hover:font-semibold'>
-                <Link href='/pages/fit-guide' >
+                <Link href='/fit-guide' >
                   <p className='hover:underline underline-offset-8 decoration-2 decoration-black'>
                   Size Guide
                   </p>

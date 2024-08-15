@@ -183,10 +183,6 @@ const Navbar = () => {
                             <Link href="" className='hover:translate-x-2 duration-500 hover:underline decoration-slate-500'>Accessories</Link>
                             </div>
                           </div>
-                      
-                      
-                       
-
                     </div>
                 </div>
                 

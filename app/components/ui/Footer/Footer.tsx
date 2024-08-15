@@ -34,7 +34,7 @@ export const Footer = () => {
                               </Link>
                           </li>
                       <li className='m-2 '>
-                              <Link href='/start a return'  className='hover:cursor-pointer'
+                              <Link href='/start-a-return'  className='hover:cursor-pointer'
                               >
                                   <p className='hover:translate-x-2 duration-200 hover:underline decoration-2 underline-offset-4 decoration-slate-400'> Start a Return</p>  
                               </Link>
@@ -161,21 +161,21 @@ export const Footer = () => {
                   <strong>©2024, URBANESWIMKE ALL RIGHTS RESERVED</strong>
                   <ul className='flex flex-row px-4 mx-4 space-x-8 list-disc text-xs '>
                       <li>
-                      <Link href='/pages/policies/privacy-policy' 
+                      <Link href='/policies/privacy-policy' 
                                   className='hover:cursor-pointer'
                                   >
                                   <p className=' hover:underline decoration-2 underline-offset-4 decoration-slate-400'> Privacy Policy</p>  
                               </Link>
                       </li>
                       <li>
-                      <Link href='/pages/policies/terms-of-service' 
+                      <Link href='/policies/terms-of-service' 
                                   className='hover:cursor-pointer'
                                   >
                                   <p className=' hover:underline decoration-2 underline-offset-4 decoration-slate-400'> Terms of Service</p>  
                               </Link>
                       </li>
                       <li>
-                      <Link href='/pages/policies/shipping-and-delivery-policy' 
+                      <Link href='/policies/shipping-and-delivery-policy' 
                                   className='hover:cursor-pointer'
                                   >
                                   <p className=' hover:underline decoration-2 underline-offset-4 decoration-slate-400'> Shipping Policy</p>  

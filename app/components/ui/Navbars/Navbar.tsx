@@ -52,7 +52,9 @@ const Navbar = () => {
             <div className="flex flex-row space-x-4 m-2 ">
               <Link href=''><FontAwesomeIcon icon={faPhone}/></Link>
               <div className="h-6 w-0.5 bg-black"></div>
-              <Link href=''><FontAwesomeIcon icon={faWhatsapp}/></Link>
+              <Link href="https://wa.me/message/WFDBTOE677NNL1"
+                              target="_blank"
+                              rel="noopener noreferrer"><FontAwesomeIcon icon={faWhatsapp}/></Link>
               <div className="h-6 w-0.5 bg-black"></div>
                 {/* Guides Dropdown */}
                 <div className="dropdown">

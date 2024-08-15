@@ -12,7 +12,7 @@ const Faq = () => {
     element?.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
   }
   return (
-      <main className='bg-white py-10 my-10  '>
+      <main className='bg-white py-5 my-5  '>
           <h1 className='font-bold text-center text-2xl pb-4 mb-4'>
               Frequently Asked Questions
           </h1>

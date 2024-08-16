@@ -21,6 +21,6 @@
       "@/*": ["./*"] 
     }
   },
-  "include": ["video.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/ui/Modals/ModalLogin.jsx", "app/components/ui/Modals/SideMenuModal.jsx", "app/components/ui/Modals/SearchModal.jsx"],
+  "include": ["video.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/ui/Modals/ModalLogin.jsx", "app/components/ui/Modals/SideMenuModal.jsx", "app/components/ui/Modals/SearchModal.jsx", "lib/prisma.js"],
   "exclude": ["node_modules"]
 }

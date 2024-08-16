@@ -48,3 +48,6 @@ public/_next-video
 .env.development.local
 .env.test.local
 .env.production.local
+
+.vercel
+.env*.local

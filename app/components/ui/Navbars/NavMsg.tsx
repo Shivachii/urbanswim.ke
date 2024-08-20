@@ -1,27 +1,13 @@
-"use client"
-import React, { useEffect, useState } from 'react'
-import  { introMsg } from  '@/app/lib/data'
+import NavMsgHadler from "./MsgStateHandler/NavMsgHandler";
 
-const NavMsg = () => {
-  const [currentMsgIndex, setCurrentMsgIndex] = useState(() => {
-    // Randomly select an initial index
-    return Math.floor(Math.random() * introMsg.length);
-  });
+export const revalidate = 1;
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentMsgIndex(prevIndex => (prevIndex + 1) % introMsg.length);
-    }, 50000); // Change the interval time )
-
-    return () => clearInterval(interval); // Clean up the interval on component unmount
-  }, []);
+export default async function NavMsg() {
   return (
-    <div className='p-2 m-2 overflow-hidden'>
-        <div className='text-sm leading-relaxed'>
-        {introMsg[currentMsgIndex].name}
-      </div>
-    </div>
-  )
-};
-
-export default NavMsg
+    <main className="">
+      <p>
+        <NavMsgHadler />
+      </p>
+    </main>
+  );
+}
